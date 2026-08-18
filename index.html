@@ -278,8 +278,6 @@
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(7.5);
                 let splitDesc = doc.splitTextToSize(item.descricao || '', 172);
-                
-                // Altura calculada da caixa com margem correta para as linhas da descrição
                 let alturaCaixa = 16 + (splitDesc.length * 3.6);
 
                 if (y + alturaCaixa > 270) {
@@ -291,7 +289,6 @@
                 doc.setDrawColor(200, 210, 225);
                 doc.roundedRect(15, y, 180, alturaCaixa, 2, 2, 'FD');
 
-                // Cabeçalho com espaçamento horizontal seguro (sem sobreposição)
                 doc.setFont('helvetica', 'bold');
                 doc.setFontSize(8);
                 doc.setTextColor(30, 41, 59);
@@ -301,11 +298,9 @@
                 doc.text(`Unit: ${formatarMoeda(item.valorUnitario)}`, 123, y + 5.5);
                 doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 190, y + 5.5, { align: 'right' });
 
-                // Linha divisória sutil
                 doc.setDrawColor(220, 225, 235);
                 doc.line(18, y + 8, 192, y + 8);
 
-                // Descrição perfeitamente dentro da caixa
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(7.5);
                 doc.setTextColor(90, 100, 115);
@@ -315,8 +310,11 @@
             });
 
             if (observacao) {
-                let splitObs = doc.splitTextToSize(observacao, 172);
-                let alturaObsBox = 14 + (splitObs.length * 4);
+                // Largura 170 garante margem interna segura de 5mm em cada lado da caixa de largura 180 (x=15 até x=195)
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(8.5);
+                let splitObs = doc.splitTextToSize(observacao, 170);
+                let alturaObsBox = 14 + (splitObs.length * 4.2);
 
                 if (y + alturaObsBox > 270) {
                     doc.addPage();
@@ -336,7 +334,7 @@
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(8.5);
                 doc.setTextColor(75, 85, 99);
-                doc.text(splitObs, 19, y + 11);
+                doc.text(splitObs, 19, y + 11.5);
 
                 y += alturaObsBox + 6;
             }
