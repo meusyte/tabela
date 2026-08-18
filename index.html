@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamentos - Vendedor</title>
+    <title>Sistema de Orçamentos - Andrade</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
@@ -18,49 +18,57 @@
 <body class="min-h-screen p-4 flex justify-center items-center">
 
     <div class="w-full max-w-lg bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center">Gerador de Orçamentos</h1>
+        <h1 class="text-xl font-bold text-gray-800 mb-4 text-center">Gerador de Orçamentos</h1>
+
+        <!-- Vendedor -->
+        <div class="mb-3">
+            <label class="block text-xs font-bold text-gray-700 mb-1">Selecione o Vendedor:</label>
+            <select id="selectVendedor" class="w-full p-2.5 text-sm border rounded-lg bg-white">
+                <option value="">Selecione o vendedor...</option>
+                <option value="BRUNO MIRANDA|(11) 91371-3031">BRUNO MIRANDA - (11) 91371-3031</option>
+                <option value="BRUNO A|(47) 99911-0041">BRUNO A - (47) 99911-0041</option>
+            </select>
+        </div>
 
         <!-- Nome do Cliente -->
         <div class="mb-3">
             <label class="block text-xs font-bold text-gray-700 mb-1">Nome do Cliente:</label>
-            <input type="text" id="cliente" class="w-full p-2.5 text-sm border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Digite o nome do cliente">
+            <input type="text" id="cliente" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Nome do cliente">
         </div>
 
-        <!-- Busca Inteligente (Marca, Modelo, Código, Descrição) -->
+        <!-- Busca por Marca, Modelo, Código ou Descrição -->
         <div class="mb-3 relative">
-            <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina (Marca, Modelo, Código, Descrição):</label>
-            <input type="text" id="busca" onkeyup="filtrarMaquinas()" class="w-full p-2.5 text-sm border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Digite para filtrar...">
-            
-            <!-- Lista suspensa de sugestões -->
-            <div id="sugestoes" class="absolute left-0 right-0 bg-v border rounded-lg mt-1 max-h-48 overflow-y-auto bg-white shadow-lg z-10 hidden"></div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina:</label>
+            <input type="text" id="busca" onkeyup="filtrarMaquinas()" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Digite marca, modelo, código ou descrição...">
+            <div id="sugestoes" class="absolute left-0 right-0 bg-white border rounded-lg mt-1 max-h-48 overflow-y-auto shadow-lg z-10 hidden"></div>
         </div>
 
-        <!-- Detalhes do Item Selecionado -->
+        <!-- Configurar Item Selecionado -->
         <div id="detalhesItem" class="hidden mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs space-y-2">
-            <p><b>Selecionado:</b> <span id="lblModelo"></span> (<span id="lblCod"></span>)</p>
+            <p><b>Modelo:</b> <span id="lblModelo"></span> | <b>Código:</b> <span id="lblCod"></span></p>
             <p class="text-gray-600" id="lblDesc"></p>
 
             <div>
-                <label class="block font-bold text-gray-700 mb-1">Forma de Pagamento & Preço:</label>
+                <label class="block font-bold text-gray-700 mb-1">Condição de Pagamento (Preço Unitário):</label>
                 <select id="selectCondicao" class="w-full p-2 border rounded bg-white text-xs"></select>
             </div>
 
             <div class="flex items-center gap-2">
                 <label class="font-bold text-gray-700">Quantidade:</label>
                 <input type="number" id="qtdItem" value="1" min="1" class="w-20 p-1 border rounded text-center">
-                <button onclick="adicionarAoOrcamento()" class="flex-1 bg-blue-600 text-white font-bold py-1.5 rounded hover:bg-blue-700">Adicionar ao Orçamento</button>
+                <button onclick="adicionarAoOrcamento()" class="flex-1 bg-blue-600 text-white font-bold py-1.5 rounded hover:bg-blue-700">Adicionar Máquina</button>
             </div>
         </div>
 
-        <!-- Carrinho / Itens do Orçamento -->
+        <!-- Lista do Carrinho -->
         <div class="mb-4">
-            <h3 class="text-xs font-bold text-gray-700 mb-2">Itens Adicionados:</h3>
+            <h3 class="text-xs font-bold text-gray-700 mb-2">Máquinas no Orçamento:</h3>
             <div id="carrinhoLista" class="border p-2 rounded-lg bg-gray-50 text-xs min-h-[70px] max-h-40 overflow-y-auto space-y-2">
-                <p class="text-gray-400 text-center italic">Nenhum item adicionado ainda.</p>
+                <p class="text-gray-400 text-center italic">Nenhuma máquina adicionada.</p>
             </div>
         </div>
 
-        <!-- Botões de Ação Final -->
+        <!-- Botões -->
         <div class="space-y-2">
             <button onclick="gerarPDF()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-lg text-sm transition shadow">
                 Gerar PDF do Orçamento
@@ -81,7 +89,7 @@
                 let res = await fetch('database.json');
                 db = await res.json();
             } catch (e) {
-                console.error("Erro ao carregar o banco de dados.", e);
+                console.error("Erro ao carregar banco de dados", e);
             }
         };
 
@@ -102,7 +110,7 @@
             );
 
             if (resultados.length === 0) {
-                divSugestoes.innerHTML = '<div class="p-2 text-gray-400 text-xs">Nenhuma máquina encontrada.</div>';
+                divSugestoes.innerHTML = '<div class="p-2 text-gray-400 text-xs">Nenhum resultado.</div>';
             } else {
                 divSugestoes.innerHTML = resultados.map(m => `
                     <div onclick='selecionarMaquina(${JSON.stringify(m)})' class="p-2 hover:bg-gray-100 cursor-pointer border-b text-xs">
@@ -122,32 +130,41 @@
             document.getElementById('lblCod').textContent = maquina.cod;
             document.getElementById('lblDesc').textContent = maquina.descricao;
 
-            // Preenche as opções de pagamento com seus respectivos valores
             let selectCond = document.getElementById('selectCondicao');
             selectCond.innerHTML = `
-                <option value="Consumidor Final|${maquina.consumidorFinal}">Consumidor Final: ${maquina.consumidorFinal}</option>
-                <option value="Depósito|${maquina.deposito || 'N/D'}">Depósito: ${maquina.deposito || 'N/D'}</option>
-                <option value="1 Boleto|${maquina.boleto1 || 'N/D'}">1 Boleto: ${maquina.boleto1 || 'N/D'}</option>
-                <option value="2 Boletos|${maquina.boleto2 || 'N/D'}">2 Boletos: ${maquina.boleto2 || 'N/D'}</option>
-                <option value="3 Boletos|${maquina.boleto3 || 'N/D'}">3 Boletos: ${maquina.boleto3 || 'N/D'}</option>
-                <option value="4 Boletos|${maquina.boleto4 || 'N/D'}">4 Boletos: ${maquina.boleto4 || 'N/D'}</option>
-                <option value="5 Boletos|${maquina.boleto5 || 'N/D'}">5 Boletos: ${maquina.boleto5 || 'N/D'}</option>
-                <option value="6 Boletos|${maquina.boleto6 || 'N/D'}">6 Boletos: ${maquina.boleto6 || 'N/D'}</option>
+                <option value="${limparPreco(maquina.consumidorFinal)}">Consumidor Final: ${maquina.consumidorFinal}</option>
+                <option value="${limparPreco(maquina.deposito)}">Depósito: ${maquina.deposito}</option>
+                <option value="${limparPreco(maquina.boleto1)}">1 Boleto: ${maquina.boleto1}</option>
+                <option value="${limparPreco(maquina.boleto2)}">2 Boletos: ${maquina.boleto2}</option>
+                <option value="${limparPreco(maquina.boleto3)}">3 Boletos: ${maquina.boleto3}</option>
+                <option value="${limparPreco(maquina.boleto4)}">4 Boletos: ${maquina.boleto4}</option>
+                <option value="${limparPreco(maquina.boleto5)}">5 Boletos: ${maquina.boleto5}</option>
+                <option value="${limparPreco(maquina.boleto6)}">6 Boletos: ${maquina.boleto6}</option>
             `;
 
             document.getElementById('detalhesItem').classList.remove('hidden');
         }
 
+        function limparPreco(str) {
+            if (!str) return 0;
+            return parseFloat(str.replace('R$', '').replace(/\./g, '').replace(',', '.').trim()) || 0;
+        }
+
+        function formatarMoeda(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
         function adicionarAoOrcamento() {
             if (!itemAtual) return;
             const qtd = parseInt(document.getElementById('qtdItem').value) || 1;
-            const condicaoValor = document.getElementById('selectCondicao').value.split('|');
+            const valorUnitario = parseFloat(document.getElementById('selectCondicao').value);
+            const totalItem = valorUnitario * qtd;
             
             carrinho.push({
                 ...itemAtual,
-                formaPagamentoEscolhida: condicaoValor[0],
-                valorEscolhido: condicaoValor[1],
-                quantidade: qtd
+                quantidade: qtd,
+                valorUnitario: valorUnitario,
+                valorTotalItem: totalItem
             });
 
             renderizarCarrinho();
@@ -160,7 +177,7 @@
         function renderizarCarrinho() {
             const container = document.getElementById('carrinhoLista');
             if (carrinho.length === 0) {
-                container.innerHTML = '<p class="text-gray-400 text-center italic">Nenhum item adicionado ainda.</p>';
+                container.innerHTML = '<p class="text-gray-400 text-center italic">Nenhuma máquina adicionada.</p>';
                 return;
             }
 
@@ -168,7 +185,7 @@
                 <div class="flex justify-between items-center bg-white p-2 border rounded shadow-sm">
                     <div>
                         <b>[${item.cod}] ${item.modelo}</b> (Qtd: ${item.quantidade})<br>
-                        <span class="text-gray-500">${item.formaPagamentoEscolhida}: <b>${item.valorEscolhido}</b></span>
+                        <span class="text-gray-500">Unit: ${formatarMoeda(item.valorUnitario)} | Total: <b>${formatarMoeda(item.valorTotalItem)}</b></span>
                     </div>
                     <button onclick="removerCarrinho(${index})" class="text-red-500 font-bold px-2 py-1 bg-red-50 rounded">X</button>
                 </div>
@@ -181,47 +198,110 @@
         }
 
         function gerarPDF() {
+            const vendedorInfo = document.getElementById('selectVendedor').value;
             const cliente = document.getElementById('cliente').value || "Cliente";
+
+            if (!vendedorInfo) {
+                alert("Selecione o vendedor antes de gerar o orçamento.");
+                return;
+            }
             if (carrinho.length === 0) {
-                alert("Adicione itens ao orçamento.");
+                alert("Adicione pelo menos uma máquina.");
                 return;
             }
 
+            const [nomeVendedor, telVendedor] = vendedorInfo.split('|');
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
-            doc.setFontSize(18);
-            doc.text("ORÇAMENTO DE MÁQUINAS", 20, 20);
-            
-            doc.setFontSize(11);
-            doc.text(`Cliente: ${cliente}`, 20, 30);
-            doc.text(`Data: ${new Date().toLocaleDateString()}`, 20, 37);
+            // Cabeçalho: Logo à esquerda e Vendedor/Telefone à direita
+            // Se tiver o arquivo logo.png no repositório, insere a imagem
+            try {
+                doc.addImage('logo.png', 'PNG', 15, 10, 40, 15);
+            } catch(e) {
+                doc.setFontSize(14);
+                doc.text("ANDRADE", 15, 20);
+            }
 
-            let y = 50;
+            doc.setFontSize(10);
+            doc.text(`Vendedor: ${nomeVendedor}`, 200, 15, { align: 'right' });
+            doc.text(`Tel: ${telVendedor}`, 200, 21, { align: 'right' });
+
+            // Dados do Cliente e Data
+            doc.setFontSize(12);
+            doc.text(`Cliente: ${cliente}`, 15, 32);
+            doc.text(`Data: ${new Date().toLocaleDateString()}`, 15, 39);
+
+            let y = 48;
+            let valorGeralTotal = 0;
+
             carrinho.forEach((item, index) => {
-                doc.text(`${index + 1}. [${item.cod}] ${item.modelo} - Qtd: ${item.quantidade}`, 20, y);
-                doc.text(`    Condição: ${item.formaPagamentoEscolhida} | Valor: ${item.valorEscolhido}`, 20, y + 6);
-                doc.text(`    Desc: ${item.descricao.substring(0, 80)}...`, 20, y + 12);
-                y += 20;
+                valorGeralTotal += item.valorTotalItem;
+
+                if (y > 250) {
+                    doc.addPage();
+                    y = 20;
+                }
+
+                // Caixa estilizada parecida com a imagem de referência
+                doc.setFillColor(240, 243, 246);
+                doc.setDrawColor(30, 90, 160);
+                doc.rect(15, y, 180, 26, 'FD'); // caixa do cabeçalho do item
+
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                doc.text(`Modelo: ${item.modelo}`, 18, y + 6);
+                doc.text(`Código: ${item.cod}`, 95, y + 6);
+                doc.text(`Qtd: ${item.quantidade}`, 155, y + 6);
+
+                doc.text(`Valor Unit.: ${formatarMoeda(item.valorUnitario)}`, 18, y + 16);
+                doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 120, y + 16);
+
+                // Descrição logo abaixo da caixa
+                doc.setFontSize(8);
+                doc.setTextColor(80, 80, 80);
+                let splitDesc = doc.splitTextToSize(item.descricao, 175);
+                doc.text(splitDesc, 18, y + 32);
+
+                y += 40 + (splitDesc.length * 4);
             });
+
+            // Valor Total Geral no final
+            if (y > 270) {
+                doc.addPage();
+                y = 20;
+            }
+
+            y += 10;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text(`VALOR TOTAL DO ORÇAMENTO: ${formatarMoeda(valorGeralTotal)}`, 200, y, { align: 'right' });
 
             doc.save(`Orcamento_${cliente.replace(/\s+/g, '_')}.pdf`);
         }
 
         function enviarWhatsApp() {
+            const vendedorInfo = document.getElementById('selectVendedor').value;
             const cliente = document.getElementById('cliente').value || "Cliente";
-            if (carrinho.length === 0) {
-                alert("Adicione itens ao orçamento.");
+
+            if (!vendedorInfo || carrinho.length === 0) {
+                alert("Preencha o vendedor e adicione máquinas.");
                 return;
             }
 
-            let msg = `*ORÇAMENTO DE MÁQUINAS*\n*Cliente:* ${cliente}\n\n*Itens Selecionados:*\n`;
+            const [nomeVendedor] = vendedorInfo.split('|');
+            let valorTotalGeral = 0;
+
+            let msg = `*ORÇAMENTO - ANDRADE*\n*Cliente:* ${cliente}\n*Vendedor:* ${nomeVendedor}\n\n*Itens:*\n`;
+            
             carrinho.forEach((item, i) => {
+                valorTotalGeral += item.valorTotalItem;
                 msg += `${i + 1}. *[${item.cod}] ${item.modelo}*\n`;
-                msg += `   - Quantidade: ${item.quantidade}\n`;
-                msg += `   - Condição: ${item.formaPagamentoEscolhida} (${item.valorEscolhido})\n`;
-                msg += `   - Descrição: ${item.descricao}\n\n`;
+                msg += `   - Qtd: ${item.quantidade} | Unit: ${formatarMoeda(item.valorUnitario)}\n`;
+                msg += `   - Subtotal: ${formatarMoeda(item.valorTotalItem)}\n\n`;
             });
+
+            msg += `*VALOR TOTAL: ${formatarMoeda(valorTotalGeral)}*`;
 
             window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
         }
