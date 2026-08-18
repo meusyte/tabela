@@ -280,8 +280,8 @@
                 doc.setFontSize(7.5);
                 let splitDesc = doc.splitTextToSize(item.descricao || '', 172);
                 
-                // Altura calculada com base nas linhas da descrição (espaçamento limpo)
-                let alturaCaixa = 12 + (splitDesc.length * 3.5);
+                // Altura calculada da caixa (cabeçalho + espaço da descrição)
+                let alturaCaixa = 15 + (splitDesc.length * 3.5);
 
                 if (y + alturaCaixa > 270) {
                     doc.addPage();
@@ -292,21 +292,25 @@
                 doc.setDrawColor(200, 210, 225);
                 doc.roundedRect(15, y, 180, alturaCaixa, 2, 2, 'FD');
 
-                // Cabeçalho com Modelo, Código, Qtd, Valor Unitário e Valor Total
+                // Cabeçalho com espaçamento correto das colunas para evitar sobreposição
                 doc.setFont('helvetica', 'bold');
                 doc.setFontSize(8);
                 doc.setTextColor(30, 41, 59);
                 doc.text(`${item.modelo}`, 18, y + 5.5);
-                doc.text(`Cód: ${item.cod}`, 72, y + 5.5);
+                doc.text(`Cód: ${item.cod}`, 70, y + 5.5);
                 doc.text(`Qtd: ${item.quantidade}`, 102, y + 5.5);
-                doc.text(`Unit: ${formatarMoeda(item.valorUnitario)}`, 128, y + 5.5);
-                doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 165, y + 5.5, { align: 'right' });
+                doc.text(`Unit: ${formatarMoeda(item.valorUnitario)}`, 123, y + 5.5);
+                doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 190, y + 5.5, { align: 'right' });
 
-                // Descrição da máquina logo abaixo do cabeçalho
+                // Linha divisória sutil entre o cabeçalho da máquina e a descrição
+                doc.setDrawColor(220, 225, 235);
+                doc.line(18, y + 8, 192, y + 8);
+
+                // Descrição da máquina perfeitamente posicionada dentro da caixa
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(7.5);
                 doc.setTextColor(90, 100, 115);
-                doc.text(splitDesc, 18, y + 10);
+                doc.text(splitDesc, 18, y + 13);
 
                 y += alturaCaixa + 4;
             });
