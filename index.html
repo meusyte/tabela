@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Orçamentos - Máquinas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="bg-gray-50 p-4 max-w-md mx-auto">
+
+    <div class="bg-white p-5 rounded-xl shadow-md">
+        <h1 class="text-xl font-bold text-gray-800 mb-4">Gerador de Orçamentos</h1>
+
+        <!-- Dados do Cliente -->
+        <div class="mb-3">
+            <label class="block text-xs font-bold text-gray-700 mb-1">Nome do Cliente:</label>
+            <input type="text" id="cliente" class="w-full p-2 text-sm border rounded-lg" placeholder="Nome do cliente">
+        </div>
+
+        <!-- Forma de Pagamento (Controle Interno - Não vai para o cliente) -->
+        <div class="mb-3">
+            <label class="block text-xs font-bold text-gray-700 mb-1">Forma de Pagamento (Uso Interno):</label>
+            <select id="pagamento" class="w-full p-2 text-sm border rounded-lg bg-white">
+                <option value="Consumidor Final">Consumidor Final</option>
+                <option value="Depósito">Depósito</option>
+                <option value="1 Boleto">1 Boleto</option>
+            </select>
+        </div>
+
+        <!-- Busca Simplificada por Código / Descrição -->
+        <div class="mb-3">
+            <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina (Código ou Descrição):</label>
+            <input type="text" id="busca" onkeyup="filtrar()" class="w-full p-2 text-sm border rounded-lg" placeholder="Digite para buscar...">
+        </div>
+
+        <div class="mb-4">
+            <select id="listaMaquinas" class="w-full p-2 text-sm border rounded-lg bg-white" onchange="adicionarItem()">
+                <option value="">Selecione a máquina...</option>
+            </select>
+        </div>
+
+        <!-- Carrinho / Itens Selecionados -->
+        <div class="mb-4">
+            <h3 class="text-xs font-bold text-gray-700 mb-2">Itens no Orçamento:</h3>
+            <div id="carrinho" class="border p-2 rounded-lg bg-gray-50 text-xs text-gray-600 min-h-[60px] max-h-40 overflow-y-auto">
+                <p class="text-gray-400 text-center italic">Nenhum item selecionado.</p>
+            </div>
+        </div>
+
+        <!-- Ações -->
+        <div class="space-y-2">
+            <button onclick="gerarPDF()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-sm transition">
+                Gerar PDF do Orçamento
+            </button>
+            <button onclick="enviarWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-lg text-sm transition">
+                Enviar por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let db = [];
+        let selecionados = [];
+
+        // Carrega o database.json automaticamente do GitHub/Servidor
+        window.onload = async function() {
+            try {
+                let response = await fetch('database.json');
+                db = await response.json();
+                atualizarSelect(db);
+            } catch (err) {
+                alert("Erro ao carregar o banco de dados. Verifique se o arquivo database.json está no repositório.");
+            }
+        };
+
+        function atualizarSelect(lista) {
+            const select = document.getElementById('listaMaquinas');
+            select.innerHTML = '<option value="">Selecione a máquina...</option>';
+            lista.forEach(item => {
+                select.innerHTML += `<option value="${item.cod}">[${item.cod}] ${item.descricao}</option>`;
+            });
+        }
+
+        function filtrar() {
+            const termo = document.getElementById('busca').value.toLowerCase();
+            const filtrados = db.filter(i => i.cod.toLowerCase().includes(termo) || i.descricao.toLowerCase().includes(termo));
+            atualizarSelect(filtrados);
+        }
+
+        function adicionarItem() {
+            const cod = document.getElementById('listaMaquinas').value;
+            if (!cod) return;
+            const item = db.find(i => i.cod === cod);
+            selecionados.push(item);
+            renderizarCarrinho();
+            document.getElementById('listaMaquinas').value = "";
+        }
+
+        function renderizarCarrinho() {
+            const container = document.getElementById('carrinho');
+            if (selecionados.length === 0) {
+                container.innerHTML = '<p class="text-gray-400 text-center italic">Nenhum item selecionado.</p>';
+                return;
+            }
+            container.innerHTML = selecionados.map((item, idx) => `
+                <div class="flex justify-between items-center bg-white p-2 border rounded mb-1">
+                    <span><b>[${item.cod}]</b> ${item.descricao}</span>
+                    <button onclick="remover(${idx})" class="text-red-500 font-bold px-2">X</button>
+                </div>
+            `).join('');
+        }
+
+        function remover(idx) {
+            selecionados.splice(idx, 1);
+            renderizarCarrinho();
+        }
+
+        function gerarPDF() {
+            const cliente = document.getElementById('cliente').value || "Cliente";
+            if (selecionados.length === 0) {
+                alert("Adicione itens ao orçamento.");
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFontSize(18);
+            doc.text("ORÇAMENTO DE MÁQUINAS", 20, 20);
+            
+            doc.setFontSize(12);
+            doc.text(`Cliente: ${cliente}`, 20, 30);
+            doc.text(`Data: ${new Date().toLocaleDateString()}`, 20, 37);
+
+            let y = 50;
+            doc.text("Itens:", 20, y);
+            y += 10;
+
+            selecionados.forEach((item, index) => {
+                doc.text(`${index + 1}. [${item.cod}] ${item.descricao}`, 20, y);
+                y += 10;
+            });
+
+            doc.save(`Orcamento_${cliente.replace(/\s+/g, '_')}.pdf`);
+        }
+
+        function enviarWhatsApp() {
+            const cliente = document.getElementById('cliente').value || "Cliente";
+            if (selecionados.length === 0) {
+                alert("Adicione itens ao orçamento.");
+                return;
+            }
+
+            let msg = `*ORÇAMENTO - MÁQUINAS*\n*Cliente:* ${cliente}\n\n*Itens:* \n`;
+            selecionados.forEach((item, i) => {
+                msg += `${i + 1}. [${item.cod}] ${item.descricao}\n`;
+            });
+
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
