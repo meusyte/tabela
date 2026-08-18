@@ -21,7 +21,7 @@
     <div class="w-full max-w-lg bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl relative pb-8">
         <h1 class="text-xl font-bold text-gray-800 mb-4 text-center">Gerador de Orçamentos</h1>
 
-        <!-- Vendedor (Carregado automaticamente do vendedores.xlsx) -->
+        <!-- Vendedor -->
         <div class="mb-3">
             <label class="block text-xs font-bold text-gray-700 mb-1">Selecione o Vendedor:</label>
             <select id="selectVendedor" class="w-full p-2.5 text-sm border rounded-lg bg-white">
@@ -41,7 +41,7 @@
             <textarea id="observacao" rows="2" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Ex: Frete grátis, prazo de entrega, etc."></textarea>
         </div>
 
-        <!-- Busca por Marca, Modelo, Código ou Descrição -->
+        <!-- Busca por Máquina -->
         <div class="mb-3 relative">
             <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina:</label>
             <input type="text" id="busca" onkeyup="filtrarMaquinas()" onclick="filtrarMaquinas()" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Digite marca, modelo, código ou descrição...">
@@ -80,7 +80,6 @@
             </button>
         </div>
 
-        <!-- Data/Horário de Atualização do Database (Discreto no canto inferior) -->
         <div class="absolute bottom-2 right-4 text-[10px] text-gray-400 italic" id="lblAtualizacaoDb">
             Database: Carregando...
         </div>
@@ -280,8 +279,8 @@
                 doc.setFontSize(7.5);
                 let splitDesc = doc.splitTextToSize(item.descricao || '', 172);
                 
-                // Altura calculada da caixa (cabeçalho + espaço da descrição)
-                let alturaCaixa = 15 + (splitDesc.length * 3.5);
+                // Altura calculada da caixa com margem correta para as linhas da descrição
+                let alturaCaixa = 16 + (splitDesc.length * 3.6);
 
                 if (y + alturaCaixa > 270) {
                     doc.addPage();
@@ -292,7 +291,7 @@
                 doc.setDrawColor(200, 210, 225);
                 doc.roundedRect(15, y, 180, alturaCaixa, 2, 2, 'FD');
 
-                // Cabeçalho com espaçamento correto das colunas para evitar sobreposição
+                // Cabeçalho com espaçamento horizontal seguro (sem sobreposição)
                 doc.setFont('helvetica', 'bold');
                 doc.setFontSize(8);
                 doc.setTextColor(30, 41, 59);
@@ -302,11 +301,11 @@
                 doc.text(`Unit: ${formatarMoeda(item.valorUnitario)}`, 123, y + 5.5);
                 doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 190, y + 5.5, { align: 'right' });
 
-                // Linha divisória sutil entre o cabeçalho da máquina e a descrição
+                // Linha divisória sutil
                 doc.setDrawColor(220, 225, 235);
                 doc.line(18, y + 8, 192, y + 8);
 
-                // Descrição da máquina perfeitamente posicionada dentro da caixa
+                // Descrição perfeitamente dentro da caixa
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(7.5);
                 doc.setTextColor(90, 100, 115);
