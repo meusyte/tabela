@@ -280,7 +280,8 @@
                 doc.setFontSize(7.5);
                 let splitDesc = doc.splitTextToSize(item.descricao || '', 172);
                 
-                let alturaCaixa = 16 + (splitDesc.length * 3.5);
+                // Altura calculada com base nas linhas da descrição (espaçamento limpo)
+                let alturaCaixa = 12 + (splitDesc.length * 3.5);
 
                 if (y + alturaCaixa > 270) {
                     doc.addPage();
@@ -291,21 +292,21 @@
                 doc.setDrawColor(200, 210, 225);
                 doc.roundedRect(15, y, 180, alturaCaixa, 2, 2, 'FD');
 
+                // Cabeçalho com Modelo, Código, Qtd, Valor Unitário e Valor Total
                 doc.setFont('helvetica', 'bold');
-                doc.setFontSize(8.5);
+                doc.setFontSize(8);
                 doc.setTextColor(30, 41, 59);
-                doc.text(`[${item.marca || 'N/A'}] ${item.modelo}`, 18, y + 5.5);
-                doc.text(`Cód: ${item.cod}`, 90, y + 5.5);
-                doc.text(`Qtd: ${item.quantidade}`, 125, y + 5.5);
+                doc.text(`${item.modelo}`, 18, y + 5.5);
+                doc.text(`Cód: ${item.cod}`, 72, y + 5.5);
+                doc.text(`Qtd: ${item.quantidade}`, 102, y + 5.5);
+                doc.text(`Unit: ${formatarMoeda(item.valorUnitario)}`, 128, y + 5.5);
                 doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 165, y + 5.5, { align: 'right' });
 
+                // Descrição da máquina logo abaixo do cabeçalho
                 doc.setFont('helvetica', 'normal');
                 doc.setFontSize(7.5);
                 doc.setTextColor(90, 100, 115);
-                doc.text(splitDesc, 18, y + 10.5);
-
-                let offsetDescY = 10.5 + (splitDesc.length * 3.5);
-                doc.text(`Valor Unitário: ${formatarMoeda(item.valorUnitario)}`, 18, y + offsetDescY);
+                doc.text(splitDesc, 18, y + 10);
 
                 y += alturaCaixa + 4;
             });
