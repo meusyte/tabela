@@ -1,646 +1,1892 @@
 [
   {
-    "id": 1,
+    "marca": "Industrial",
     "modelo": "X10TF - 3 - 02/233/A - I",
     "cod": "MAQ148",
     "consumidorFinal": "R$ 7.189,00",
-    "descricao": "Máquina modelo X10TF - 3 - 02/233/A - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X10TF - 3 - 02/233/A - I de alta performance."
   },
   {
-    "id": 2,
+    "marca": "Industrial",
     "modelo": "X5SE - 3 - 02/233 - I",
     "cod": "MAQ095",
     "consumidorFinal": "R$ 6.527,00",
-    "descricao": "Máquina modelo X5SE - 3 - 02/233 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5SE - 3 - 02/233 - I de alta performance."
   },
   {
-    "id": 3,
+    "marca": "Industrial",
     "modelo": "X5C - 3 - 02/233 - I",
     "cod": "MAQ034",
     "consumidorFinal": "R$ 5.926,00",
-    "descricao": "Máquina modelo X5C - 3 - 02/233 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5C - 3 - 02/233 - I de alta performance."
   },
   {
-    "id": 4,
+    "marca": "Industrial",
     "modelo": "X1C - 3 - 02/233/CT - SCM",
     "cod": "MAQ013TA",
     "consumidorFinal": "R$ 8.061,00",
-    "descricao": "Máquina modelo X1C - 3 - 02/233/CT - SCM"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 3 - 02/233/CT - SCM de alta performance."
   },
   {
-    "id": 5,
+    "marca": "Industrial",
     "modelo": "X1C - 3 - 02/233",
     "cod": "MAQ013",
     "consumidorFinal": "R$ 4.418,00",
-    "descricao": "Máquina modelo X1C - 3 - 02/233"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 3 - 02/233 de alta performance."
   },
   {
-    "id": 6,
+    "marca": "Industrial",
     "modelo": "X1C - 3 - 82/233",
     "cod": "MAQ014",
     "consumidorFinal": "R$ 4.760,00",
-    "descricao": "Máquina modelo X1C - 3 - 82/233"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 3 - 82/233 de alta performance."
   },
   {
-    "id": 7,
+    "marca": "Industrial",
     "modelo": "C1S - 3 - 04/BK",
     "cod": "MAQ136",
     "consumidorFinal": "R$ 4.461,00",
-    "descricao": "Máquina modelo C1S - 3 - 04/BK"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1S - 3 - 04/BK de alta performance."
   },
   {
-    "id": 8,
+    "marca": "Industrial",
     "modelo": "C1S - 3 - 04/LFC",
     "cod": "MAQ133",
     "consumidorFinal": "R$ 8.283,00",
-    "descricao": "Máquina modelo C1S - 3 - 04/LFC"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1S - 3 - 04/LFC de alta performance."
   },
   {
-    "id": 9,
+    "marca": "Industrial",
     "modelo": "C1 - 3 - 04/LFC",
     "cod": "MAQ121",
     "consumidorFinal": "R$ 7.921,00",
-    "descricao": "Máquina modelo C1 - 3 - 04/LFC"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1 - 3 - 04/LFC de alta performance."
   },
   {
-    "id": 10,
+    "marca": "Industrial",
     "modelo": "X10TF - 4 - M03/333/A - I",
     "cod": "MAQ149",
     "consumidorFinal": "R$ 7.278,00",
-    "descricao": "Máquina modelo X10TF - 4 - M03/333/A - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X10TF - 4 - M03/333/A - I de alta performance."
   },
   {
-    "id": 11,
+    "marca": "Industrial",
     "modelo": "X5SE - 4 - M03/333 - I",
     "cod": "MAQ096",
     "consumidorFinal": "R$ 6.640,00",
-    "descricao": "Máquina modelo X5SE - 4 - M03/333 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5SE - 4 - M03/333 - I de alta performance."
   },
   {
-    "id": 12,
+    "marca": "Industrial",
     "modelo": "X5C - 4 - M03/333 - I",
     "cod": "MAQ011",
     "consumidorFinal": "R$ 5.975,00",
-    "descricao": "Máquina modelo X5C - 4 - M03/333 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5C - 4 - M03/333 - I de alta performance."
   },
   {
-    "id": 13,
+    "marca": "Industrial",
     "modelo": "X5C - 4 - 03H/333 - I",
     "cod": "MAQ035",
     "consumidorFinal": "R$ 6.135,00",
-    "descricao": "Máquina modelo X5C - 4 - 03H/333 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5C - 4 - 03H/333 - I de alta performance."
   },
   {
-    "id": 14,
+    "marca": "Industrial",
     "modelo": "X1C - 4 - 54/433",
     "cod": "MAQ010",
     "consumidorFinal": "R$ 4.493,00",
-    "descricao": "Máquina modelo X1C - 4 - 54/433"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 4 - 54/433 de alta performance."
   },
   {
-    "id": 15,
+    "marca": "Industrial",
     "modelo": "C1 - 4 - 24",
     "cod": "MAQ045",
     "consumidorFinal": "R$ 3.827,00",
-    "descricao": "Máquina modelo C1 - 4 - 24"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1 - 4 - 24 de alta performance."
   },
   {
-    "id": 16,
+    "marca": "Industrial",
     "modelo": "X1C - 4 - 83/323",
     "cod": "MAQ023",
     "consumidorFinal": "R$ 4.858,00",
-    "descricao": "Máquina modelo X1C - 4 - 83/323"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 4 - 83/323 de alta performance."
   },
   {
-    "id": 17,
+    "marca": "Industrial",
     "modelo": "C1S - 4 - 24/LFC (220V )",
     "cod": "MAQ137",
     "consumidorFinal": "R$ 8.532,00",
-    "descricao": "Máquina modelo C1S - 4 - 24/LFC (220V )"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1S - 4 - 24/LFC (220V ) de alta performance."
   },
   {
-    "id": 18,
+    "marca": "Industrial",
     "modelo": "X10TF - 5 - 03/233/A - I",
     "cod": "MAQ150",
     "consumidorFinal": "R$ 7.367,00",
-    "descricao": "Máquina modelo X10TF - 5 - 03/233/A - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X10TF - 5 - 03/233/A - I de alta performance."
   },
   {
-    "id": 19,
+    "marca": "Industrial",
     "modelo": "X5SE - 5 - 03/233 - I",
     "cod": "MAQ097",
     "consumidorFinal": "R$ 6.721,00",
-    "descricao": "Máquina modelo X5SE - 5 - 03/233 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5SE - 5 - 03/233 - I de alta performance."
   },
   {
-    "id": 20,
+    "marca": "Industrial",
     "modelo": "X5Se - 5 - 04/435/A - I",
     "cod": "MAQ110",
     "consumidorFinal": "R$ 6.935,00",
-    "descricao": "Máquina modelo X5Se - 5 - 04/435/A - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5Se - 5 - 04/435/A - I de alta performance."
   },
   {
-    "id": 21,
+    "marca": "Industrial",
     "modelo": "X5C - 5 - 04/435 - I",
     "cod": "MAQ038",
     "consumidorFinal": "R$ 6.241,00",
-    "descricao": "Máquina modelo X5C - 5 - 04/435 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5C - 5 - 04/435 - I de alta performance."
   },
   {
-    "id": 22,
+    "marca": "Industrial",
     "modelo": "X1C - 5 - 04/435",
     "cod": "MAQ026",
     "consumidorFinal": "R$ 4.798,00",
-    "descricao": "Máquina modelo X1C - 5 - 04/435"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 5 - 04/435 de alta performance."
   },
   {
-    "id": 23,
+    "marca": "Industrial",
     "modelo": "X1C - 5 - 52P2/083",
     "cod": "MAQ083",
     "consumidorFinal": "R$ 5.324,00",
-    "descricao": "Máquina modelo X1C - 5 - 52P2/083"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X1C - 5 - 52P2/083 de alta performance."
   },
   {
-    "id": 24,
+    "marca": "Industrial",
     "modelo": "X5C - 5 - 03/233 - I - GPL",
     "cod": "MAQ036TB",
     "consumidorFinal": "R$ 10.781,00",
-    "descricao": "Máquina modelo X5C - 5 - 03/233 - I - GPL"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo X5C - 5 - 03/233 - I - GPL de alta performance."
   },
   {
-    "id": 25,
+    "marca": "Industrial",
     "modelo": "C1 - 5 - 35/GPL",
     "cod": "MAQ030TB",
     "consumidorFinal": "R$ 8.070,00",
-    "descricao": "Máquina modelo C1 - 5 - 35/GPL"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1 - 5 - 35/GPL de alta performance."
   },
   {
-    "id": 26,
+    "marca": "Industrial",
     "modelo": "C1 - 5 - 35/MEX",
     "cod": "MAQ030TA",
     "consumidorFinal": "R$ 8.693,00",
-    "descricao": "Máquina modelo C1 - 5 - 35/MEX"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo C1 - 5 - 35/MEX de alta performance."
   },
   {
-    "id": 27,
+    "marca": "Industrial",
     "modelo": "Q7Ls-WM-4N-I",
     "cod": "MAQ154",
     "consumidorFinal": "R$ 6.123,00",
-    "descricao": "Máquina modelo Q7Ls-WM-4N-I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q7Ls-WM-4N-I de alta performance."
   },
   {
-    "id": 28,
+    "marca": "Industrial",
     "modelo": "Q6Ls - HL - 4C - I",
     "cod": "MAQ135",
     "consumidorFinal": "R$ 5.320,00",
-    "descricao": "Máquina modelo Q6Ls - HL - 4C - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q6Ls - HL - 4C - I de alta performance."
   },
   {
-    "id": 29,
+    "marca": "Industrial",
     "modelo": "Q6LTE - M - 4C - I",
     "cod": "MAQ081",
     "consumidorFinal": "R$ 5.049,00",
-    "descricao": "Máquina modelo Q6LTE - M - 4C - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q6LTE - M - 4C - I de alta performance."
   },
   {
-    "id": 30,
+    "marca": "Industrial",
     "modelo": "Q5Fe - M - 4C - I",
     "cod": "MAQ117",
     "consumidorFinal": "R$ 4.280,00",
-    "descricao": "Máquina modelo Q5Fe - M - 4C - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q5Fe - M - 4C - I de alta performance."
   },
   {
-    "id": 31,
+    "marca": "Industrial",
     "modelo": "Q6LTE - HL - 4C - I",
     "cod": "MAQ100",
     "consumidorFinal": "R$ 5.198,00",
-    "descricao": "Máquina modelo Q6LTE - HL - 4C - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q6LTE - HL - 4C - I de alta performance."
   },
   {
-    "id": 32,
+    "marca": "Industrial",
     "modelo": "Q5TE - HL - 4CB - I - 3",
     "cod": "MAQ085",
     "consumidorFinal": "R$ 5.255,00",
-    "descricao": "Máquina modelo Q5TE - HL - 4CB - I - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q5TE - HL - 4CB - I - 3 de alta performance."
   },
   {
-    "id": 33,
+    "marca": "Industrial",
     "modelo": "Q5TE - HL - 4C - I - 3",
     "cod": "MAQ104",
     "consumidorFinal": "R$ 4.878,00",
-    "descricao": "Máquina modelo Q5TE - HL - 4C - I - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo Q5TE - HL - 4C - I - 3 de alta performance."
   },
   {
-    "id": 34,
+    "marca": "Industrial",
     "modelo": "LS - 1591N - D3 - Y",
     "cod": "MAQ092",
     "consumidorFinal": "R$ 13.272,00",
-    "descricao": "Máquina modelo LS - 1591N - D3 - Y"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 1591N - D3 - Y de alta performance."
   },
   {
-    "id": 35,
+    "marca": "Industrial",
     "modelo": "LS - 591N - D3 - Y",
     "cod": "MAQ090",
     "consumidorFinal": "R$ 11.712,00",
-    "descricao": "Máquina modelo LS - 591N - D3 - Y"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 591N - D3 - Y de alta performance."
   },
   {
-    "id": 36,
+    "marca": "Industrial",
     "modelo": "LS - 592N - D3 - Y",
     "cod": "MAQ091",
     "consumidorFinal": "R$ 14.346,00",
-    "descricao": "Máquina modelo LS - 592N - D3 - Y"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 592N - D3 - Y de alta performance."
   },
   {
-    "id": 37,
+    "marca": "Industrial",
     "modelo": "LS - H4400",
     "cod": "MAQ071",
     "consumidorFinal": "R$ 8.883,00",
-    "descricao": "Máquina modelo LS - H4400"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - H4400 de alta performance."
   },
   {
-    "id": 38,
+    "marca": "Industrial",
     "modelo": "LS - H4420",
     "cod": "MAQ072",
     "consumidorFinal": "R$ 9.586,00",
-    "descricao": "Máquina modelo LS - H4420"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - H4420 de alta performance."
   },
   {
-    "id": 39,
+    "marca": "Industrial",
     "modelo": "LS 640E - D4",
     "cod": "MAQ070",
     "consumidorFinal": "R$ 9.949,00",
-    "descricao": "Máquina modelo LS 640E - D4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 640E - D4 de alta performance."
   },
   {
-    "id": 40,
+    "marca": "Industrial",
     "modelo": "LS - 0313FE - TD3",
     "cod": "MAQ134",
     "consumidorFinal": "R$ 7.118,00",
-    "descricao": "Máquina modelo LS - 0313FE - TD3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 0313FE - TD3 de alta performance."
   },
   {
-    "id": 41,
+    "marca": "Industrial",
     "modelo": "LS - 0303E - TD4",
     "cod": "MAQ008",
     "consumidorFinal": "R$ 5.696,00",
-    "descricao": "Máquina modelo LS - 0303E - TD4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 0303E - TD4 de alta performance."
   },
   {
-    "id": 42,
+    "marca": "Industrial",
     "modelo": "LS 9520MX - TD4",
     "cod": "MAQ004",
     "consumidorFinal": "R$ 6.650,00",
-    "descricao": "Máquina modelo LS 9520MX - TD4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 9520MX - TD4 de alta performance."
   },
   {
-    "id": 43,
+    "marca": "Industrial",
     "modelo": "LS 9520DP",
     "cod": "MAQ109",
     "consumidorFinal": "R$ 5.001,00",
-    "descricao": "Máquina modelo LS 9520DP"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 9520DP de alta performance."
   },
   {
-    "id": 44,
+    "marca": "Industrial",
     "modelo": "LS - T2284ND",
     "cod": "MAQ123",
     "consumidorFinal": "R$ 14.327,00",
-    "descricao": "Máquina modelo LS - T2284ND"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T2284ND de alta performance."
   },
   {
-    "id": 45,
+    "marca": "Industrial",
     "modelo": "LS8720EZN - D4/ABPT",
     "cod": "MAQ079TA",
     "consumidorFinal": "R$ 21.154,00",
-    "descricao": "Máquina modelo LS8720EZN - D4/ABPT"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8720EZN - D4/ABPT de alta performance."
   },
   {
-    "id": 46,
+    "marca": "Industrial",
     "modelo": "LS8420ND - 3/BJ",
     "cod": "MAQ049TA",
     "consumidorFinal": "R$ 10.949,00",
-    "descricao": "Máquina modelo LS8420ND - 3/BJ"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8420ND - 3/BJ de alta performance."
   },
   {
-    "id": 47,
+    "marca": "Industrial",
     "modelo": "LS 8750EZN - D4",
     "cod": "MAQ005",
     "consumidorFinal": "R$ 19.861,00",
-    "descricao": "Máquina modelo LS 8750EZN - D4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 8750EZN - D4 de alta performance."
   },
   {
-    "id": 48,
+    "marca": "Industrial",
     "modelo": "LS8750N - D4",
     "cod": "MAQ055",
     "consumidorFinal": "R$ 14.531,00",
-    "descricao": "Máquina modelo LS8750N - D4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8750N - D4 de alta performance."
   },
   {
-    "id": 49,
+    "marca": "Industrial",
     "modelo": "LS 8750DP",
     "cod": "MAQ099",
     "consumidorFinal": "R$ 10.204,00",
-    "descricao": "Máquina modelo LS 8750DP"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 8750DP de alta performance."
   },
   {
-    "id": 50,
+    "marca": "Industrial",
     "modelo": "LS8450EZN - D3 - 5",
     "cod": "MAQ053",
     "consumidorFinal": "R$ 12.231,00",
-    "descricao": "Máquina modelo LS8450EZN - D3 - 5"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8450EZN - D3 - 5 de alta performance."
   },
   {
-    "id": 51,
+    "marca": "Industrial",
     "modelo": "LS8450N - D4 - 5",
     "cod": "MAQ051",
     "consumidorFinal": "R$ 12.125,00",
-    "descricao": "Máquina modelo LS8450N - D4 - 5"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8450N - D4 - 5 de alta performance."
   },
   {
-    "id": 52,
+    "marca": "Industrial",
     "modelo": "LS8450ND - 3",
     "cod": "MAQ048",
     "consumidorFinal": "R$ 8.744,00",
-    "descricao": "Máquina modelo LS8450ND - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8450ND - 3 de alta performance."
   },
   {
-    "id": 53,
+    "marca": "Industrial",
     "modelo": "LS 8450DP-3",
     "cod": "MAQ151",
     "consumidorFinal": "R$ 9.412,00",
-    "descricao": "Máquina modelo LS 8450DP-3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 8450DP-3 de alta performance."
   },
   {
-    "id": 54,
+    "marca": "Industrial",
     "modelo": "LS8720EZN - D4",
     "cod": "MAQ079",
     "consumidorFinal": "R$ 18.344,00",
-    "descricao": "Máquina modelo LS8720EZN - D4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8720EZN - D4 de alta performance."
   },
   {
-    "id": 55,
+    "marca": "Industrial",
     "modelo": "LS 8720DP",
     "cod": "MAQ098",
     "consumidorFinal": "R$ 8.522,00",
-    "descricao": "Máquina modelo LS 8720DP"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 8720DP de alta performance."
   },
   {
-    "id": 56,
+    "marca": "Industrial",
     "modelo": "LS 8420DP - 3",
     "cod": "MAQ144",
     "consumidorFinal": "R$ 8.324,00",
-    "descricao": "Máquina modelo LS 8420DP - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 8420DP - 3 de alta performance."
   },
   {
-    "id": 57,
+    "marca": "Industrial",
     "modelo": "LS8420ND - 3",
     "cod": "MAQ049",
     "consumidorFinal": "R$ 7.734,00",
-    "descricao": "Máquina modelo LS8420ND - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8420ND - 3 de alta performance."
   },
   {
-    "id": 58,
+    "marca": "Industrial",
     "modelo": "LS8420EZN - D4 - 3",
     "cod": "MAQ131",
     "consumidorFinal": "R$ 17.478,00",
-    "descricao": "Máquina modelo LS8420EZN - D4 - 3"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS8420EZN - D4 - 3 de alta performance."
   },
   {
-    "id": 59,
+    "marca": "Industrial",
     "modelo": "LS - 1500L - CB364 - EST",
     "cod": "MAQ120",
     "consumidorFinal": "R$ 19.218,00",
-    "descricao": "Máquina modelo LS - 1500L - CB364 - EST"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 1500L - CB364 - EST de alta performance."
   },
   {
-    "id": 60,
+    "marca": "Industrial",
     "modelo": "LS - 1500L - 364D",
     "cod": "MAQ119",
     "consumidorFinal": "R$ 15.875,00",
-    "descricao": "Máquina modelo LS - 1500L - 364D"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 1500L - 364D de alta performance."
   },
   {
-    "id": 61,
+    "marca": "Industrial",
     "modelo": "P5e-35AB/UT/SW/6.4",
     "cod": "MAQ152",
     "consumidorFinal": "R$ 19.455,00",
-    "descricao": "Máquina modelo P5e-35AB/UT/SW/6.4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P5e-35AB/UT/SW/6.4 de alta performance."
   },
   {
-    "id": 62,
+    "marca": "Industrial",
     "modelo": "P5-35ABX364/SW-II",
     "cod": "MAQ161",
     "consumidorFinal": "R$ 18.483,00",
-    "descricao": "Máquina modelo P5-35ABX364/SW-II"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P5-35ABX364/SW-II de alta performance."
   },
   {
-    "id": 63,
+    "marca": "Industrial",
     "modelo": "LS32026P - 35AB/UT/SW/6.4",
     "cod": "MAQ057",
     "consumidorFinal": "R$ 17.189,00",
-    "descricao": "Máquina modelo LS32026P - 35AB/UT/SW/6.4"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS32026P - 35AB/UT/SW/6.4 de alta performance."
   },
   {
-    "id": 64,
+    "marca": "Industrial",
     "modelo": "P5e-01CBX364/SW-II",
     "cod": "MAQ157",
     "consumidorFinal": "R$ 16.126,00",
-    "descricao": "Máquina modelo P5e-01CBX364/SW-II"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P5e-01CBX364/SW-II de alta performance."
   },
   {
-    "id": 65,
+    "marca": "Industrial",
     "modelo": "P5 - 01CBX364/SW/RP - II",
     "cod": "MAQ115",
     "consumidorFinal": "R$ 16.606,00",
-    "descricao": "Máquina modelo P5 - 01CBX364/SW/RP - II"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P5 - 01CBX364/SW/RP - II de alta performance."
   },
   {
-    "id": 66,
+    "marca": "Industrial",
     "modelo": "P1C - 01CBX364/RP - I",
     "cod": "MAQ122",
     "consumidorFinal": "R$ 11.190,00",
-    "descricao": "Máquina modelo P1C - 01CBX364/RP - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P1C - 01CBX364/RP - I de alta performance."
   },
   {
-    "id": 67,
+    "marca": "Industrial",
     "modelo": "P1C - 01CBx364 - I",
     "cod": "MAQ114",
     "consumidorFinal": "R$ 9.792,00",
-    "descricao": "Máquina modelo P1C - 01CBx364 - I"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo P1C - 01CBx364 - I de alta performance."
   },
   {
-    "id": 68,
+    "marca": "Industrial",
     "modelo": "W5e-01CBX364/SW-II",
     "cod": "MAQ153",
     "consumidorFinal": "R$ 12.932,00",
-    "descricao": "Máquina modelo W5e-01CBX364/SW-II"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo W5e-01CBX364/SW-II de alta performance."
   },
   {
-    "id": 69,
+    "marca": "Industrial",
     "modelo": "LS1503 PTF/D",
     "cod": "MAQ078",
     "consumidorFinal": "R$ 11.466,00",
-    "descricao": "Máquina modelo LS1503 PTF/D"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS1503 PTF/D de alta performance."
   },
   {
-    "id": 70,
+    "marca": "Industrial",
     "modelo": "LS 2000C/D",
     "cod": "MAQ101",
     "consumidorFinal": "R$ 11.870,00",
-    "descricao": "Máquina modelo LS 2000C/D"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 2000C/D de alta performance."
   },
   {
-    "id": 71,
+    "marca": "Industrial",
     "modelo": "LS - 3830DP - PL",
     "cod": "MAQ007",
     "consumidorFinal": "R$ 7.003,00",
-    "descricao": "Máquina modelo LS - 3830DP - PL"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - 3830DP - PL de alta performance."
   },
   {
-    "id": 72,
+    "marca": "Industrial",
     "modelo": "LS 3830DP",
     "cod": "MAQ056",
     "consumidorFinal": "R$ 5.938,00",
-    "descricao": "Máquina modelo LS 3830DP"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 3830DP de alta performance."
   },
   {
-    "id": 73,
+    "marca": "Industrial",
     "modelo": "LS3830FD",
     "cod": "MAQ155",
     "consumidorFinal": "R$ 6.121,00",
-    "descricao": "Máquina modelo LS3830FD"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS3830FD de alta performance."
   },
   {
-    "id": 74,
+    "marca": "Industrial",
     "modelo": "LS - T928D - 2PL",
     "cod": "MAQ066",
     "consumidorFinal": "R$ 11.666,00",
-    "descricao": "Máquina modelo LS - T928D - 2PL"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T928D - 2PL de alta performance."
   },
   {
-    "id": 75,
+    "marca": "Industrial",
     "modelo": "LS - T927D - 2PL",
     "cod": "MAQ065",
     "consumidorFinal": "R$ 10.515,00",
-    "descricao": "Máquina modelo LS - T927D - 2PL"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T927D - 2PL de alta performance."
   },
   {
-    "id": 76,
+    "marca": "Industrial",
     "modelo": "LS - T9820 - 01 E",
     "cod": "MAQ019",
     "consumidorFinal": "R$ 51.496,00",
-    "descricao": "Máquina modelo LS - T9820 - 01 E"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T9820 - 01 E de alta performance."
   },
   {
-    "id": 77,
+    "marca": "Industrial",
     "modelo": "LS - T782F",
     "cod": "MAQ015",
     "consumidorFinal": "R$ 15.586,00",
-    "descricao": "Máquina modelo LS - T782F"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T782F de alta performance."
   },
   {
-    "id": 78,
+    "marca": "Industrial",
     "modelo": "M928 - EM - SA - LC",
     "cod": "MAQ107",
     "consumidorFinal": "R$ 94.554,00",
-    "descricao": "Máquina modelo M928 - EM - SA - LC"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo M928 - EM - SA - LC de alta performance."
   },
   {
-    "id": 79,
+    "marca": "Industrial",
     "modelo": "M928 - EM - SA",
     "cod": "MAQ076",
     "consumidorFinal": "R$ 76.447,00",
-    "descricao": "Máquina modelo M928 - EM - SA"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo M928 - EM - SA de alta performance."
   },
   {
-    "id": 80,
+    "marca": "Industrial",
     "modelo": "M10 - 95ETA",
     "cod": "MAQ108",
     "consumidorFinal": "R$ 98.574,00",
-    "descricao": "Máquina modelo M10 - 95ETA"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo M10 - 95ETA de alta performance."
   },
   {
-    "id": 81,
+    "marca": "Industrial",
     "modelo": "LS - T3520F - DH - LC - T240",
     "cod": "MAQ087",
     "consumidorFinal": "R$ 57.625,00",
-    "descricao": "Máquina modelo LS - T3520F - DH - LC - T240"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T3520F - DH - LC - T240 de alta performance."
   },
   {
-    "id": 82,
+    "marca": "Industrial",
     "modelo": "LS 1063",
     "cod": "MAQ158",
     "consumidorFinal": "R$ 90.285,00",
-    "descricao": "Máquina modelo LS 1063"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 1063 de alta performance."
   },
   {
-    "id": 83,
+    "marca": "Industrial",
     "modelo": "LS 9028-C-2",
     "cod": "MAQ159",
     "consumidorFinal": "R$ 171.095,00",
-    "descricao": "Máquina modelo LS 9028-C-2"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 9028-C-2 de alta performance."
   },
   {
-    "id": 84,
+    "marca": "Industrial",
     "modelo": "LS 9063-SY",
     "cod": "MAQ160",
     "consumidorFinal": "R$ 71.744,00",
-    "descricao": "Máquina modelo LS 9063-SY"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS 9063-SY de alta performance."
   },
   {
-    "id": 85,
+    "marca": "Industrial",
     "modelo": "LS - T3020G - CH",
     "cod": "MAQ020",
     "consumidorFinal": "R$ 72.583,00",
-    "descricao": "Máquina modelo LS - T3020G - CH"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T3020G - CH de alta performance."
   },
   {
-    "id": 86,
+    "marca": "Industrial",
     "modelo": "LS - T2210G - 01A - CH",
     "cod": "MAQ074",
     "consumidorFinal": "R$ 46.047,00",
-    "descricao": "Máquina modelo LS - T2210G - 01A - CH"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T2210G - 01A - CH de alta performance."
   },
   {
-    "id": 87,
+    "marca": "Industrial",
     "modelo": "LS - T1310G - 01A - CH",
     "cod": "MAQ073",
     "consumidorFinal": "R$ 44.276,00",
-    "descricao": "Máquina modelo LS - T1310G - 01A - CH"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T1310G - 01A - CH de alta performance."
   },
   {
-    "id": 88,
+    "marca": "Industrial",
     "modelo": "LS6011 - C",
     "cod": "MAQ118",
     "consumidorFinal": "R$ 122.297,00",
-    "descricao": "Máquina modelo LS6011 - C"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS6011 - C de alta performance."
   },
   {
-    "id": 89,
+    "marca": "Industrial",
     "modelo": "LS - T438GE - A - SK",
     "cod": "MAQ064",
     "consumidorFinal": "R$ 51.430,00",
-    "descricao": "Máquina modelo LS - T438GE - A - SK"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T438GE - A - SK de alta performance."
   },
   {
-    "id": 90,
+    "marca": "Industrial",
     "modelo": "LS - T1900ESS - ZH - Y",
     "cod": "MAQ094",
     "consumidorFinal": "R$ 24.023,00",
-    "descricao": "Máquina modelo LS - T1900ESS - ZH - Y"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T1900ESS - ZH - Y de alta performance."
   },
   {
-    "id": 91,
+    "marca": "Industrial",
     "modelo": "LS - T436GE - A",
     "cod": "MAQ018",
     "consumidorFinal": "R$ 25.124,00",
-    "descricao": "Máquina modelo LS - T436GE - A"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T436GE - A de alta performance."
   },
   {
-    "id": 92,
+    "marca": "Industrial",
     "modelo": "LS - T1906F",
     "cod": "MAQ102",
     "consumidorFinal": "R$ 24.681,00",
-    "descricao": "Máquina modelo LS - T1906F"
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo LS - T1906F de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-737S",
+    "cod": "NSA067",
+    "consumidorFinal": "R$ 4.637,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-737S de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8200T-03DM-04",
+    "cod": "NSA355",
+    "consumidorFinal": "R$ 7.663,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8200T-03DM-04 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8300-03DM2-04-7/P/ATC",
+    "cod": "NSA264",
+    "consumidorFinal": "R$ 9.111,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8300-03DM2-04-7/P/ATC de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8400-03DM-04/C",
+    "cod": "NSA202",
+    "consumidorFinal": "R$ 11.545,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8400-03DM-04/C de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8100-03D-ST",
+    "cod": "NSA262",
+    "consumidorFinal": "R$ 10.894,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8100-03D-ST de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G7814EE4",
+    "cod": "NSA398",
+    "consumidorFinal": "R$ 4.932,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G7814EE4 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "7724D",
+    "cod": "NSA302",
+    "consumidorFinal": "R$ 3.025,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo 7724D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8200T-04DM2-24",
+    "cod": "NSA270",
+    "consumidorFinal": "R$ 7.770,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8200T-04DM2-24 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8300-04DM2-24-7/P/ATC",
+    "cod": "NSA263",
+    "consumidorFinal": "R$ 9.300,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8300-04DM2-24-7/P/ATC de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8400-04DM2-24-7/P/AT",
+    "cod": "NSA295",
+    "consumidorFinal": "R$ 40.628,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8400-04DM2-24-7/P/AT de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8400T-04DM2-24-7/P/AAC",
+    "cod": "NSA322",
+    "consumidorFinal": "R$ 32.042,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8400T-04DM2-24-7/P/AAC de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8400-04DM2-24/C",
+    "cod": "NSA321",
+    "consumidorFinal": "R$ 11.894,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8400-04DM2-24/C de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-757S",
+    "cod": "NSA069",
+    "consumidorFinal": "R$ 4.777,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-757S de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-757-86DD",
+    "cod": "NSA102",
+    "consumidorFinal": "R$ 2.494,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-757-86DD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8200T-05DX5-56",
+    "cod": "NSA269",
+    "consumidorFinal": "R$ 8.140,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8200T-05DX5-56 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8200T-05DX5-56-CAB",
+    "cod": "NSA269C",
+    "consumidorFinal": "R$ 7.326,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8200T-05DX5-56-CAB de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8200T-05DH5-55",
+    "cod": "NSA354",
+    "consumidorFinal": "R$ 7.889,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8200T-05DH5-55 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-MK-MD",
+    "cod": "NSA462",
+    "consumidorFinal": "R$ 2.274,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-MK-MD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-6650D-4",
+    "cod": "NSA456",
+    "consumidorFinal": "R$ 7.378,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-6650D-4 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G9300D3-H-Y-AK",
+    "cod": "NSA177",
+    "consumidorFinal": "R$ 6.835,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G9300D3-H-Y-AK de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G9300D3-H-Y",
+    "cod": "NSA141",
+    "consumidorFinal": "R$ 5.216,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G9300D3-H-Y de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G8125ME4-DC",
+    "cod": "NSA397",
+    "consumidorFinal": "R$ 4.838,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G8125ME4-DC de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "8960ME4-DC",
+    "cod": "NSA303",
+    "consumidorFinal": "R$ 4.960,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo 8960ME4-DC de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G9100-NTFB",
+    "cod": "NSA084",
+    "consumidorFinal": "R$ 3.590,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G9100-NTFB de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G9050-NT",
+    "cod": "NSA109",
+    "consumidorFinal": "R$ 2.907,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G9050-NT de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G9000B-D",
+    "cod": "NSA175",
+    "consumidorFinal": "R$ 3.492,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G9000B-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-MTPJ",
+    "cod": "NSA463",
+    "consumidorFinal": "R$ 5.378,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-MTPJ de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-6680D-4",
+    "cod": "NSA457",
+    "consumidorFinal": "R$ 9.246,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-6680D-4 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L2290A-SR-7/P",
+    "cod": "NSA201",
+    "consumidorFinal": "R$ 22.337,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L2290A-SR-7/P de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G2297D3-SR",
+    "cod": "NSA160",
+    "consumidorFinal": "R$ 24.061,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G2297D3-SR de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L2284-D-7/P",
+    "cod": "NSA294",
+    "consumidorFinal": "R$ 17.211,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L2284-D-7/P de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G20U123T/D",
+    "cod": "NSA301",
+    "consumidorFinal": "R$ 4.720,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G20U123T/D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-20U-A2",
+    "cod": "NSA427",
+    "consumidorFinal": "R$ 7.296,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-20U-A2 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G20U93",
+    "cod": "NSA227",
+    "consumidorFinal": "R$ 2.742,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G20U93 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G8752E4-H",
+    "cod": "NSA396",
+    "consumidorFinal": "R$ 17.858,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G8752E4-H de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G8750D4-H",
+    "cod": "NSA159",
+    "consumidorFinal": "R$ 16.609,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G8750D4-H de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-8750D",
+    "cod": "NSA071",
+    "consumidorFinal": "R$ 15.764,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-8750D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8750D-5",
+    "cod": "NSA415",
+    "consumidorFinal": "R$ 8.154,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8750D-5 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G82-75H",
+    "cod": "NSA108",
+    "consumidorFinal": "R$ 8.200,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G82-75H de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8720D-5",
+    "cod": "NSA414",
+    "consumidorFinal": "R$ 6.395,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8720D-5 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-8720D",
+    "cod": "NSA059",
+    "consumidorFinal": "R$ 14.798,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-8720D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-8420D",
+    "cod": "NSA135",
+    "consumidorFinal": "R$ 13.833,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-8420D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L8420D-3",
+    "cod": "NSA413",
+    "consumidorFinal": "R$ 6.155,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L8420D-3 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G82-42H",
+    "cod": "NSA106",
+    "consumidorFinal": "R$ 5.830,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G82-42H de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D791DN",
+    "cod": "NSA373",
+    "consumidorFinal": "R$ 14.658,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D791DN de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D4420D-7",
+    "cod": "NSA440",
+    "consumidorFinal": "R$ 16.644,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D4420D-7 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1560-2",
+    "cod": "NSA421",
+    "consumidorFinal": "R$ 14.194,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1560-2 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1560",
+    "cod": "NSA362",
+    "consumidorFinal": "R$ 12.930,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1560 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D867-121232",
+    "cod": "NSA393",
+    "consumidorFinal": "R$ 44.936,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D867-121232 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D0617D-7",
+    "cod": "NSA445",
+    "consumidorFinal": "R$ 11.690,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D0617D-7 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1541S-2",
+    "cod": "NSA420",
+    "consumidorFinal": "R$ 9.165,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1541S-2 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1510L-25",
+    "cod": "NSA375",
+    "consumidorFinal": "R$ 29.222,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1510L-25 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1508D-AEL",
+    "cod": "NSA444",
+    "consumidorFinal": "R$ 23.256,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1508D-AEL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1508D-AE",
+    "cod": "NSA443",
+    "consumidorFinal": "R$ 17.127,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1508D-AE de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D204-370",
+    "cod": "NSA361",
+    "consumidorFinal": "R$ 26.909,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D204-370 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D205-370",
+    "cod": "NSA374",
+    "consumidorFinal": "R$ 28.067,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D205-370 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D335G",
+    "cod": "NSA422",
+    "consumidorFinal": "R$ 10.230,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D335G de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D1341D",
+    "cod": "NSA423",
+    "consumidorFinal": "R$ 9.517,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D1341D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G2628LG",
+    "cod": "NSA334",
+    "consumidorFinal": "R$ 8.681,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G2628LG de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D204-104A",
+    "cod": "NSA391",
+    "consumidorFinal": "R$ 29.813,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D204-104A de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D2532-D",
+    "cod": "NSA442",
+    "consumidorFinal": "R$ 9.652,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D2532-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D2531-D",
+    "cod": "NSA441",
+    "consumidorFinal": "R$ 8.820,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D2531-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DGT146-FOA",
+    "cod": "NSA450",
+    "consumidorFinal": "R$ 14.130,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DGT146-FOA de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DGT146D-MX",
+    "cod": "NSA451",
+    "consumidorFinal": "R$ 13.230,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DGT146D-MX de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-562ED-01CBX364/UT",
+    "cod": "NSA464",
+    "consumidorFinal": "R$ 10.941,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-562ED-01CBX364/UT de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G364-01",
+    "cod": "NSA083",
+    "consumidorFinal": "R$ 3.975,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G364-01 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L6800-D-7/P-FL",
+    "cod": "NSA323",
+    "consumidorFinal": "R$ 25.121,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L6800-D-7/P-FL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L6700-D-7/P-FL",
+    "cod": "NSA203",
+    "consumidorFinal": "R$ 22.173,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L6700-D-7/P-FL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L677-T-D-7/P",
+    "cod": "NSA267",
+    "consumidorFinal": "R$ 21.991,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L677-T-D-7/P de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L6800-D",
+    "cod": "NSA446",
+    "consumidorFinal": "R$ 15.516,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L6800-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-566/CY",
+    "cod": "NSA098",
+    "consumidorFinal": "R$ 6.304,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-566/CY de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L6288-05-MR-6.0D",
+    "cod": "NSA268",
+    "consumidorFinal": "R$ 26.344,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L6288-05-MR-6.0D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-L6200-01MS-60D",
+    "cod": "NSA191",
+    "consumidorFinal": "R$ 21.824,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-L6200-01MS-60D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "CATRACA ELETRÔNICA (INSTALADA)",
+    "cod": "XDS001T",
+    "consumidorFinal": "R$ 10.807,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo CATRACA ELETRÔNICA (INSTALADA) de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "CATRACA ELETRÔNICA NÃO INSTALADA",
+    "cod": "XDS001",
+    "consumidorFinal": "R$ 7.071,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo CATRACA ELETRÔNICA NÃO INSTALADA de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-06064P-D/VPL",
+    "cod": "NSA433",
+    "consumidorFinal": "R$ 12.321,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-06064P-D/VPL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G008-12064P-DD/VPL",
+    "cod": "NSA273TA",
+    "consumidorFinal": "R$ 12.949,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G008-12064P-DD/VPL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-18064P-D",
+    "cod": "NSA432",
+    "consumidorFinal": "R$ 14.135,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-18064P-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-12064P-ZD",
+    "cod": "NSA431",
+    "consumidorFinal": "R$ 17.352,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-12064P-ZD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-12064P-D",
+    "cod": "NSA430",
+    "consumidorFinal": "R$ 11.503,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-12064P-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-04085P-ZD",
+    "cod": "NSA435",
+    "consumidorFinal": "R$ 16.767,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-04085P-ZD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-008-04085P-D",
+    "cod": "NSA434",
+    "consumidorFinal": "R$ 10.624,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-008-04085P-D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G008-04085P/DD",
+    "cod": "NSA395",
+    "consumidorFinal": "R$ 10.092,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G008-04085P/DD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-9820-02",
+    "cod": "NSA057",
+    "consumidorFinal": "R$ 49.575,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-9820-02 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-5780L",
+    "cod": "NSA046",
+    "consumidorFinal": "R$ 25.458,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-5780L de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-781FS",
+    "cod": "NSA461",
+    "consumidorFinal": "R$ 13.422,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-781FS de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-438D/KBP/PNM",
+    "cod": "NSA031TA",
+    "consumidorFinal": "R$ 23.011,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-438D/KBP/PNM de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-438D",
+    "cod": "NSA031",
+    "consumidorFinal": "R$ 17.814,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-438D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-373D-378",
+    "cod": "NSA459",
+    "consumidorFinal": "R$ 20.773,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-373D-378 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-G1377D",
+    "cod": "NSA335",
+    "consumidorFinal": "R$ 6.827,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-G1377D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-1377D",
+    "cod": "NSA449",
+    "consumidorFinal": "R$ 7.040,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-1377D de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-T1577",
+    "cod": "NSA044",
+    "consumidorFinal": "R$ 4.371,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-T1577 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-T1373",
+    "cod": "NSA066",
+    "consumidorFinal": "R$ 4.142,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-T1373 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-430D-06XL",
+    "cod": "NSA419",
+    "consumidorFinal": "R$ 20.942,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-430D-06XL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-430D-01",
+    "cod": "NSA004",
+    "consumidorFinal": "R$ 15.957,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-430D-01 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-430D-02L",
+    "cod": "NSA005",
+    "consumidorFinal": "R$ 16.540,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-430D-02L de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-430D-06",
+    "cod": "NSA056",
+    "consumidorFinal": "R$ 17.027,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-430D-06 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-420",
+    "cod": "NSA047",
+    "consumidorFinal": "R$ 7.934,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-420 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D2210PNA",
+    "cod": "NSA040",
+    "consumidorFinal": "R$ 34.138,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D2210PNA de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS1306 EL",
+    "cod": "NSA447",
+    "consumidorFinal": "R$ 28.936,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS1306 EL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-JTA3B-01C",
+    "cod": "NSA452",
+    "consumidorFinal": "R$ 141.396,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-JTA3B-01C de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-2210MJ-ASN",
+    "cod": "NSA418",
+    "consumidorFinal": "R$ 84.450,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-2210MJ-ASN de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-254-ZD",
+    "cod": "NSA345",
+    "consumidorFinal": "R$ 194.587,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-254-ZD de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS2210N/PW",
+    "cod": "NSA448",
+    "consumidorFinal": "R$ 243.965,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS2210N/PW de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-D3020AJP   Código: NSA072   Preço Único Consumidor Final: R$ 101.008,00  Máquina automá Ɵ ca de bolso, com alimentador automá Ɵ co.  MÁQUINAS PESADAS PROGRAMÁVEIS  EM OFERTA   Modelo: GA204-108   Código: NSA013   Preço Único Consumidor Final: R$ 42.658,00  Máquina automá Ɵ ca de costura livre para tecidos extra pesados, área de 13x6cm. Velocidade 800 ppm.  MÁQUINA DE CORTE AUTOMÁTICO  Modelo: FLEXO TAILOR C600   Código: NSA224   Preço Único Consumidor Final: R$ 600.093,00  Máquina de corte automá Ɵ ca SANSEI com sistema de mesa modular (módulos de 1,5 mts). Largura: 200 cms; Comprimento: 600 cms; Altura máxima de Corte: 6 cms (compactado).  ENFESTADEIRA  Modelo: OXP4ADD-1800   Código: ORO001   Preço Único Consumidor Final: R$ 499.153,00  Enfestadeira automá Ɵ ca, Sansei by Orox, com largura de 1800mm,  MÁQUINA DE CORTE (Corte por Faca)  EM OFERTA Modelo Principal: DC-3B   Consumidor Final: R$ 2.326,00  Opção 1: (NSA015) - DC-3B, 8\" -: (8\") / (220 volts) Opção 2: (NSA016) - DC-3B,10\" -: (10\") / (220 volts)  Depósito   1 Boleto*   2 Boletos   3 Boletos   4 Boletos   5 Boletos   6 Boletos  R$ 1.512,00   R$ 1.541,00   R$ 1.556,00   R$ 1.570,00   R$ 1.585,00   R$ 1.600,00   R$ 1.614,00 Máquina de corte, 220 volts, com faca de 8\" ou 10\", motor de 550 Wa Ʃ s. Produto com IPI (já incluso), sujeito a ST ou DIFAL (não inclusos).  EM OFERTA Modelo: DC-3D,10\"",
+    "cod": "NSA018",
+    "consumidorFinal": "R$ 2.529,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-D3020AJP   Código: NSA072   Preço Único Consumidor Final: R$ 101.008,00  Máquina automá Ɵ ca de bolso, com alimentador automá Ɵ co.  MÁQUINAS PESADAS PROGRAMÁVEIS  EM OFERTA   Modelo: GA204-108   Código: NSA013   Preço Único Consumidor Final: R$ 42.658,00  Máquina automá Ɵ ca de costura livre para tecidos extra pesados, área de 13x6cm. Velocidade 800 ppm.  MÁQUINA DE CORTE AUTOMÁTICO  Modelo: FLEXO TAILOR C600   Código: NSA224   Preço Único Consumidor Final: R$ 600.093,00  Máquina de corte automá Ɵ ca SANSEI com sistema de mesa modular (módulos de 1,5 mts). Largura: 200 cms; Comprimento: 600 cms; Altura máxima de Corte: 6 cms (compactado).  ENFESTADEIRA  Modelo: OXP4ADD-1800   Código: ORO001   Preço Único Consumidor Final: R$ 499.153,00  Enfestadeira automá Ɵ ca, Sansei by Orox, com largura de 1800mm,  MÁQUINA DE CORTE (Corte por Faca)  EM OFERTA Modelo Principal: DC-3B   Consumidor Final: R$ 2.326,00  Opção 1: (NSA015) - DC-3B, 8\" -: (8\") / (220 volts) Opção 2: (NSA016) - DC-3B,10\" -: (10\") / (220 volts)  Depósito   1 Boleto*   2 Boletos   3 Boletos   4 Boletos   5 Boletos   6 Boletos  R$ 1.512,00   R$ 1.541,00   R$ 1.556,00   R$ 1.570,00   R$ 1.585,00   R$ 1.600,00   R$ 1.614,00 Máquina de corte, 220 volts, com faca de 8\" ou 10\", motor de 550 Wa Ʃ s. Produto com IPI (já incluso), sujeito a ST ou DIFAL (não inclusos).  EM OFERTA Modelo: DC-3D,10\" de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-18S/EFL",
+    "cod": "NSA455",
+    "consumidorFinal": "R$ 12.586,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-18S/EFL de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-MK11S",
+    "cod": "NSA438",
+    "consumidorFinal": "R$ 32.924,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-MK11S de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-MK08A",
+    "cod": "NSA439",
+    "consumidorFinal": "R$ 3.818,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-MK08A de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-DS-FPS-1   Código: NSA458   Preço Único Consumidor Final: R$ 55.738,00  Máquina semiautomá Ɵ ca para dobrar camisetas e camisas pólos, com sistema para dobra e empilhamento automá Ɵ co ou dobra e ensacamento manual. Alavancas para seleção manual de comprimento e largura e ajustador lateral para melhor acomodação da peça. Contador de peças, empilhador com elevador autoajustável (também pode ser erguido/rebaixado manualmente). Potência de 150W, monofásico 220V, consumo de ar de 0,6Mpa (requer compressor). Capacidade produ Ɵ va de 300 a 400 peças/hora.  MÁQUINA DE LIMPAR FIOS  Modelo: SA-TC-02",
+    "cod": "NSA318",
+    "consumidorFinal": "R$ 4.020,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-DS-FPS-1   Código: NSA458   Preço Único Consumidor Final: R$ 55.738,00  Máquina semiautomá Ɵ ca para dobrar camisetas e camisas pólos, com sistema para dobra e empilhamento automá Ɵ co ou dobra e ensacamento manual. Alavancas para seleção manual de comprimento e largura e ajustador lateral para melhor acomodação da peça. Contador de peças, empilhador com elevador autoajustável (também pode ser erguido/rebaixado manualmente). Potência de 150W, monofásico 220V, consumo de ar de 0,6Mpa (requer compressor). Capacidade produ Ɵ va de 300 a 400 peças/hora.  MÁQUINA DE LIMPAR FIOS  Modelo: SA-TC-02 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "TDZ-Q2",
+    "cod": "PSA003",
+    "consumidorFinal": "R$ 8.190,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo TDZ-Q2 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "TDZC-Q3",
+    "cod": "PSA004",
+    "consumidorFinal": "R$ 7.275,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo TDZC-Q3 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "TDZ-B1",
+    "cod": "PSA009",
+    "consumidorFinal": "R$ 7.371,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo TDZ-B1 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "TP-B6",
+    "cod": "PSA005",
+    "consumidorFinal": "R$ 5.990,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo TP-B6 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-600B",
+    "cod": "PSA007",
+    "consumidorFinal": "R$ 20.812,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-600B de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "DLD6-0.4-B4-AT",
+    "cod": "PSA002T",
+    "consumidorFinal": "R$ 11.415,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo DLD6-0.4-B4-AT de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "DLD6-0.4-B4",
+    "cod": "PSA002",
+    "consumidorFinal": "R$ 9.175,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo DLD6-0.4-B4 de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "SA-21A",
+    "cod": "PSA008",
+    "consumidorFinal": "R$ 3.738,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo SA-21A de alta performance."
+  },
+  {
+    "marca": "Industrial",
+    "modelo": "ST-B200",
+    "cod": "PSA006",
+    "consumidorFinal": "R$ 1.717,00",
+    "deposito": "R$ 0,00",
+    "boleto1": "R$ 0,00",
+    "descricao": "Máquina modelo ST-B200 de alta performance."
   }
 ]
