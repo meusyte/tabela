@@ -35,6 +35,12 @@
             <input type="text" id="cliente" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Nome do cliente">
         </div>
 
+        <!-- Observações -->
+        <div class="mb-3">
+            <label class="block text-xs font-bold text-gray-700 mb-1">Observações do Orçamento:</label>
+            <textarea id="observacao" rows="2" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Ex: Frete grátis, prazo de entrega, etc."></textarea>
+        </div>
+
         <!-- Busca por Marca, Modelo, Código ou Descrição -->
         <div class="mb-3 relative">
             <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina:</label>
@@ -84,7 +90,6 @@
         let itemAtual = null;
 
         window.onload = async function() {
-            // 1. Carrega banco de dados de máquinas
             try {
                 let res = await fetch('database.json');
                 db = await res.json();
@@ -92,7 +97,6 @@
                 console.error("Erro ao carregar database.json", e);
             }
 
-            // 2. Carrega vendedores diretamente do arquivo vendedores.xlsx no GitHub
             try {
                 let resXlsx = await fetch('vendedores.xlsx');
                 let buffer = await resXlsx.arrayBuffer();
@@ -228,6 +232,7 @@
         function gerarPDF() {
             const vendedorInfo = document.getElementById('selectVendedor').value;
             const cliente = document.getElementById('cliente').value || "Cliente";
+            const observacao = document.getElementById('observacao').value.trim();
 
             if (!vendedorInfo) {
                 alert("Selecione o vendedor antes de gerar o orçamento.");
@@ -271,7 +276,7 @@
                 let alturaDesc = splitDesc.length * 3.5;
                 let alturaCaixa = 28 + alturaDesc;
 
-                if (y + alturaCaixa > 280) {
+                if (y + alturaCaixa > 270) {
                     doc.addPage();
                     y = 20;
                 }
@@ -290,7 +295,7 @@
                 doc.text(`Código: ${item.cod}`, 130, y + 6);
                 doc.text(`Qtd: ${item.quantidade}`, 170, y + 6);
 
-                // Valores (Sem exibir qualquer texto indesejado de boleto/depósito)
+                // Valores
                 doc.setFontSize(9);
                 doc.text(`Valor Unit.: ${formatarMoeda(item.valorUnitario)}`, 18, y + 14);
                 doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 130, y + 14);
@@ -306,6 +311,25 @@
 
                 y += alturaCaixa + 6;
             });
+
+            // Se houver observações, exibe no orçamento
+            if (observacao) {
+                if (y > 250) {
+                    doc.addPage();
+                    y = 20;
+                }
+                y += 4;
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(9);
+                doc.setTextColor(30, 41, 59);
+                doc.text("Observações:", 15, y);
+                
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(8.5);
+                let splitObs = doc.splitTextToSize(observacao, 180);
+                doc.text(splitObs, 15, y + 5);
+                y += 8 + (splitObs.length * 4);
+            }
 
             // Valor Total Geral no final
             if (y > 270) {
@@ -325,6 +349,7 @@
         function enviarWhatsApp() {
             const vendedorInfo = document.getElementById('selectVendedor').value;
             const cliente = document.getElementById('cliente').value || "Cliente";
+            const observacao = document.getElementById('observacao').value.trim();
 
             if (!vendedorInfo || carrinho.length === 0) {
                 alert("Preencha o vendedor e adicione máquinas.");
@@ -342,6 +367,10 @@
                 msg += `   - Qtd: ${item.quantidade} | Unit: ${formatarMoeda(item.valorUnitario)}\n`;
                 msg += `   - Subtotal: ${formatarMoeda(item.valorTotalItem)}\n\n`;
             });
+
+            if (observacao) {
+                msg += `*Observações:* ${observacao}\n\n`;
+            }
 
             msg += `*VALOR TOTAL: ${formatarMoeda(valorTotalGeral)}*`;
 
