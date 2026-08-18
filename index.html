@@ -2,11 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Orçamentos - Andrade</title>
+    <title>Gerador de arquivo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         body {
             background-image: url('fundo.png');
@@ -16,365 +14,144 @@
         }
     </style>
 </head>
-<body class="min-h-screen p-4 flex justify-center items-center">
+<body class="min-h-screen p-6 flex flex-col items-center justify-center">
+    <div class="w-full max-w-xl bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+        <h1 class="text-xl font-bold mb-4 text-gray-800 text-center">Gerador de arquivo</h1>
+        
+        <div id="statusCarregamento" class="text-xs text-green-600 mb-3 font-semibold text-center">Tabela de marcas carregada internamente com sucesso!</div>
 
-    <div class="w-full max-w-lg bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl">
-        <h1 class="text-xl font-bold text-gray-800 mb-4 text-center">Gerador de Orçamentos</h1>
-
-        <!-- Vendedor (Carregado automaticamente do vendedores.xlsx) -->
-        <div class="mb-3">
-            <label class="block text-xs font-bold text-gray-700 mb-1">Selecione o Vendedor:</label>
-            <select id="selectVendedor" class="w-full p-2.5 text-sm border rounded-lg bg-white">
-                <option value="">Carregando vendedores...</option>
-            </select>
-        </div>
-
-        <!-- Nome do Cliente -->
-        <div class="mb-3">
-            <label class="block text-xs font-bold text-gray-700 mb-1">Nome do Cliente:</label>
-            <input type="text" id="cliente" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Nome do cliente">
-        </div>
-
-        <!-- Observações -->
-        <div class="mb-3">
-            <label class="block text-xs font-bold text-gray-700 mb-1">Observações do Orçamento:</label>
-            <textarea id="observacao" rows="2" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Ex: Frete grátis, prazo de entrega, etc."></textarea>
-        </div>
-
-        <!-- Busca por Marca, Modelo, Código ou Descrição -->
-        <div class="mb-3 relative">
-            <label class="block text-xs font-bold text-gray-700 mb-1">Buscar Máquina:</label>
-            <input type="text" id="busca" onkeyup="filtrarMaquinas()" class="w-full p-2.5 text-sm border rounded-lg" placeholder="Digite marca, modelo, código ou descrição...">
-            <div id="sugestoes" class="absolute left-0 right-0 bg-white border rounded-lg mt-1 max-h-48 overflow-y-auto shadow-lg z-10 hidden"></div>
-        </div>
-
-        <!-- Configurar Item Selecionado -->
-        <div id="detalhesItem" class="hidden mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs space-y-2">
-            <p><b>Marca:</b> <span id="lblMarca"></span> | <b>Modelo:</b> <span id="lblModelo"></span> | <b>Código:</b> <span id="lblCod"></span></p>
-            <p class="text-gray-600" id="lblDesc"></p>
-
-            <div>
-                <label class="block font-bold text-gray-700 mb-1">Condição de Pagamento (Preço Unitário):</label>
-                <select id="selectCondicao" class="w-full p-2 border rounded bg-white text-xs"></select>
-            </div>
-
-            <div class="flex items-center gap-2">
-                <label class="font-bold text-gray-700">Quantidade:</label>
-                <input type="number" id="qtdItem" value="1" min="1" class="w-20 p-1 border rounded text-center">
-                <button onclick="adicionarAoOrcamento()" class="flex-1 bg-blue-600 text-white font-bold py-1.5 rounded hover:bg-blue-700">Adicionar Máquina</button>
-            </div>
-        </div>
-
-        <!-- Lista do Carrinho -->
         <div class="mb-4">
-            <h3 class="text-xs font-bold text-gray-700 mb-2">Máquinas no Orçamento:</h3>
-            <div id="carrinhoLista" class="border p-2 rounded-lg bg-gray-50 text-xs min-h-[70px] max-h-40 overflow-y-auto space-y-2">
-                <p class="text-gray-400 text-center italic">Nenhuma máquina adicionada.</p>
-            </div>
+            <label class="block text-sm font-bold mb-2">Selecione os PDFs de Máquinas:</label>
+            <input type="file" id="pdfFiles" accept=".pdf" multiple class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
         </div>
 
-        <!-- Botões -->
-        <div class="space-y-2">
-            <button onclick="gerarPDF()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-lg text-sm transition shadow">
-                Gerar PDF do Orçamento
-            </button>
-            <button onclick="enviarWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-sm transition shadow">
-                Enviar por WhatsApp
+        <button onclick="processarPDFs()" class="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 mb-4 shadow">
+            Processar PDFs e Gerar database.json
+        </button>
+
+        <div id="status" class="text-sm text-gray-600 mb-4 text-center"></div>
+
+        <div id="downloadArea" class="hidden">
+            <button onclick="baixarJSON()" class="w-full bg-green-600 text-white font-bold py-2 rounded-lg hover:bg-green-700 shadow">
+                Baixar "database.json" (Salvar no GitHub)
             </button>
         </div>
     </div>
 
     <script>
-        let db = [];
-        let carrinho = [];
-        let itemAtual = null;
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        let databaseGlobal = [];
 
-        window.onload = async function() {
-            try {
-                let res = await fetch('database.json');
-                db = await res.json();
-            } catch (e) {
-                console.error("Erro ao carregar database.json", e);
-            }
-
-            try {
-                let resXlsx = await fetch('vendedores.xlsx');
-                let buffer = await resXlsx.arrayBuffer();
-                let workbook = XLSX.read(buffer, { type: 'array' });
-                let firstSheetName = workbook.SheetNames[0];
-                let worksheet = workbook.Sheets[firstSheetName];
-                let vendedoresData = XLSX.utils.sheet_to_json(worksheet);
-
-                let selectVendedor = document.getElementById('selectVendedor');
-                selectVendedor.innerHTML = '<option value="">Selecione o vendedor...</option>';
-
-                vendedoresData.forEach(v => {
-                    let nome = v.NOME || v.nome || '';
-                    let telefone = v.TELEFONE || v.telefone || '';
-                    if (nome) {
-                        let opt = document.createElement('option');
-                        opt.value = `${nome}|${telefone}`;
-                        opt.textContent = `${nome} - ${telefone}`;
-                        selectVendedor.appendChild(opt);
-                    }
-                });
-            } catch (e) {
-                console.error("Erro ao carregar vendedores.xlsx", e);
-                document.getElementById('selectVendedor').innerHTML = '<option value="">Erro ao carregar vendedores.xlsx</option>';
-            }
+        // Tabela de marcas fixa mapeada diretamente dos seus códigos
+        const mapaMarcas = {
+            "MAQ": "MAQI",
+            "KSA": "KANSAI",
+            "NSA": "SANSEI",
+            "STN": "SANTIAN",
+            "GG": "SANSEI",
+            "BRO": "BROTHER",
+            "DA0": "DURKOPP-ADLER",
+            "HAS": "HASHIMA",
+            "JP0": "JAPSEW",
+            "LP0": "LUNAPRESS"
         };
 
-        function filtrarMaquinas() {
-            const termo = document.getElementById('busca').value.toLowerCase();
-            const divSugestoes = document.getElementById('sugestoes');
-            
-            if (termo.length < 2) {
-                divSugestoes.classList.add('hidden');
+        async function processarPDFs() {
+            const fileInput = document.getElementById('pdfFiles');
+            const status = document.getElementById('status');
+            if (fileInput.files.length === 0) {
+                alert("Selecione pelo menos um arquivo PDF!");
                 return;
             }
 
-            const resultados = db.filter(m => 
-                (m.marca && m.marca.toLowerCase().includes(termo)) ||
-                (m.modelo && m.modelo.toLowerCase().includes(termo)) ||
-                (m.cod && m.cod.toLowerCase().includes(termo)) ||
-                (m.descricao && m.descricao.toLowerCase().includes(termo))
-            );
+            databaseGlobal = [];
+            status.textContent = "Processando arquivos...";
 
-            if (resultados.length === 0) {
-                divSugestoes.innerHTML = '<div class="p-2 text-gray-400 text-xs">Nenhum resultado.</div>';
-            } else {
-                divSugestoes.innerHTML = resultados.map(m => `
-                    <div onclick='selecionarMaquina(${JSON.stringify(m)})' class="p-2 hover:bg-gray-100 cursor-pointer border-b text-xs">
-                        <b>[${m.marca || ''}]</b> ${m.modelo} - <span class="text-gray-500">${m.cod}</span>
-                    </div>
-                `).join('');
-            }
-            divSugestoes.classList.remove('hidden');
-        }
+            for (let file of fileInput.files) {
+                try {
+                    let nomeArquivo = file.name.replace(/\.[^/.]+$/, "");
+                    let marcaFallback = nomeArquivo.split(/[-_\s]+/).pop().toUpperCase();
 
-        function selecionarMaquina(maquina) {
-            itemAtual = maquina;
-            document.getElementById('busca').value = `[${maquina.marca || ''}] ${maquina.modelo}`;
-            document.getElementById('sugestoes').classList.add('hidden');
+                    const arrayBuffer = await file.arrayBuffer();
+                    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                    let textoCompleto = "";
 
-            document.getElementById('lblMarca').textContent = maquina.marca || 'N/A';
-            document.getElementById('lblModelo').textContent = maquina.modelo;
-            document.getElementById('lblCod').textContent = maquina.cod;
-            document.getElementById('lblDesc').textContent = maquina.descricao;
+                    for (let i = 1; i <= pdf.numPages; i++) {
+                        const page = await pdf.getPage(i);
+                        const textContent = await page.getTextContent();
+                        textoCompleto += textContent.items.map(item => item.str).join(" ") + "\n";
+                    }
 
-            let selectCond = document.getElementById('selectCondicao');
-            selectCond.innerHTML = `
-                <option value="${limparPreco(maquina.consumidorFinal)}">Consumidor Final: ${maquina.consumidorFinal}</option>
-                <option value="${limparPreco(maquina.deposito)}">Depósito: ${maquina.deposito}</option>
-                <option value="${limparPreco(maquina.boleto1)}">1 Boleto: ${maquina.boleto1}</option>
-                <option value="${limparPreco(maquina.boleto2)}">2 Boletos: ${maquina.boleto2}</option>
-                <option value="${limparPreco(maquina.boleto3)}">3 Boletos: ${maquina.boleto3}</option>
-                <option value="${limparPreco(maquina.boleto4)}">4 Boletos: ${maquina.boleto4}</option>
-                <option value="${limparPreco(maquina.boleto5)}">5 Boletos: ${maquina.boleto5}</option>
-                <option value="${limparPreco(maquina.boleto6)}">6 Boletos: ${maquina.boleto6}</option>
-            `;
+                    const regexItem = /Modelo:\s*(.*?)\s*Código:\s*([A-Za-z0-9]+)\s*Consumidor Final:\s*(R\$\s*[\d\.,]+)/g;
+                    let match;
+                    while ((match = regexItem.exec(textoCompleto)) !== null) {
+                        let modelo = match[1].trim();
+                        let cod = match[2].trim();
+                        let consumidorFinal = match[3].trim();
 
-            document.getElementById('detalhesItem').classList.remove('hidden');
-        }
+                        // Descobre a marca com base no prefixo do código
+                        let marcaFinal = marcaFallback;
+                        let codigoUpper = cod.toUpperCase();
+                        
+                        let prefixosOrdenados = Object.keys(mapaMarcas).sort((a, b) => b.length - a.length);
+                        for (let pref of prefixosOrdenados) {
+                            if (codigoUpper.startsWith(pref)) {
+                                marcaFinal = mapaMarcas[pref];
+                                break;
+                            }
+                        }
 
-        function limparPreco(str) {
-            if (!str) return 0;
-            return parseFloat(str.replace('R$', '').replace(/\./g, '').replace(',', '.').trim()) || 0;
-        }
+                        let startIndex = match.index + match[0].length;
+                        let proximoTrecho = textoCompleto.substring(startIndex, startIndex + 1500);
+                        let precosEncontrados = proximoTrecho.match(/R\$\s*[\d\.,]+/g) || [];
 
-        function formatarMoeda(valor) {
-            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        }
-
-        function adicionarAoOrcamento() {
-            if (!itemAtual) return;
-            const qtd = parseInt(document.getElementById('qtdItem').value) || 1;
-            const valorUnitario = parseFloat(document.getElementById('selectCondicao').value);
-            const totalItem = valorUnitario * qtd;
-            
-            carrinho.push({
-                ...itemAtual,
-                quantidade: qtd,
-                valorUnitario: valorUnitario,
-                valorTotalItem: totalItem
-            });
-
-            renderizarCarrinho();
-            document.getElementById('detalhesItem').classList.add('hidden');
-            document.getElementById('busca').value = '';
-            document.getElementById('qtdItem').value = '1';
-            itemAtual = null;
-        }
-
-        function renderizarCarrinho() {
-            const container = document.getElementById('carrinhoLista');
-            if (carrinho.length === 0) {
-                container.innerHTML = '<p class="text-gray-400 text-center italic">Nenhuma máquina adicionada.</p>';
-                return;
-            }
-
-            container.innerHTML = carrinho.map((item, index) => `
-                <div class="flex justify-between items-center bg-white p-2 border rounded shadow-sm">
-                    <div>
-                        <b>[${item.marca}] ${item.modelo}</b> (Qtd: ${item.quantidade})<br>
-                        <span class="text-gray-500">Unit: ${formatarMoeda(item.valorUnitario)} | Total: <b>${formatarMoeda(item.valorTotalItem)}</b></span>
-                    </div>
-                    <button onclick="removerCarrinho(${index})" class="text-red-500 font-bold px-2 py-1 bg-red-50 rounded">X</button>
-                </div>
-            `).join('');
-        }
-
-        function removerCarrinho(index) {
-            carrinho.splice(index, 1);
-            renderizarCarrinho();
-        }
-
-        function gerarPDF() {
-            const vendedorInfo = document.getElementById('selectVendedor').value;
-            const cliente = document.getElementById('cliente').value || "Cliente";
-            const observacao = document.getElementById('observacao').value.trim();
-
-            if (!vendedorInfo) {
-                alert("Selecione o vendedor antes de gerar o orçamento.");
-                return;
-            }
-            if (carrinho.length === 0) {
-                alert("Adicione pelo menos uma máquina.");
-                return;
-            }
-
-            const [nomeVendedor, telVendedor] = vendedorInfo.split('|');
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            // Logo maior à esquerda e Vendedor à direita
-            try {
-                doc.addImage('logo.png', 'PNG', 15, 10, 55, 22);
-            } catch(e) {
-                doc.setFontSize(16);
-                doc.text("ANDRADE", 15, 20);
-            }
-
-            doc.setFontSize(10);
-            doc.text(`Vendedor: ${nomeVendedor}`, 200, 15, { align: 'right' });
-            doc.text(`Tel: ${telVendedor}`, 200, 21, { align: 'right' });
-
-            // Dados do Cliente e Data
-            doc.setFontSize(11);
-            doc.text(`Cliente: ${cliente}`, 15, 38);
-            doc.text(`Data: ${new Date().toLocaleDateString()}`, 15, 45);
-
-            let y = 52;
-            let valorGeralTotal = 0;
-
-            carrinho.forEach((item, index) => {
-                valorGeralTotal += item.valorTotalItem;
-
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(8);
-                let splitDesc = doc.splitTextToSize(item.descricao || "", 175);
-                let alturaDesc = splitDesc.length * 3.5;
-                let alturaCaixa = 28 + alturaDesc;
-
-                if (y + alturaCaixa > 270) {
-                    doc.addPage();
-                    y = 20;
+                        databaseGlobal.push({
+                            marca: marcaFinal,
+                            modelo: modelo,
+                            cod: cod,
+                            consumidorFinal: consumidorFinal,
+                            deposito: precosEncontrados[0] || "R$ 0,00",
+                            boleto1: precosEncontrados[1] || "R$ 0,00",
+                            boleto2: precosEncontrados[2] || "R$ 0,00",
+                            boleto3: precosEncontrados[3] || "R$ 0,00",
+                            boleto4: precosEncontrados[4] || "R$ 0,00",
+                            boleto5: precosEncontrados[5] || "R$ 0,00",
+                            boleto6: precosEncontrados[6] || "R$ 0,00",
+                            descricao: limparDescricao(proximoTrecho)
+                        });
+                    }
+                } catch (err) {
+                    console.error("Erro ao ler o arquivo " + file.name, err);
                 }
-
-                // Caixa unificada da máquina
-                doc.setFillColor(248, 250, 252);
-                doc.setDrawColor(200, 210, 225);
-                doc.roundedRect(15, y, 180, alturaCaixa, 2, 2, 'FD');
-
-                // Cabeçalho da Caixa
-                doc.setFont('helvetica', 'bold');
-                doc.setFontSize(9);
-                doc.setTextColor(30, 41, 59);
-                doc.text(`Marca: ${item.marca || 'N/A'}`, 18, y + 6);
-                doc.text(`Modelo: ${item.modelo}`, 65, y + 6);
-                doc.text(`Código: ${item.cod}`, 130, y + 6);
-                doc.text(`Qtd: ${item.quantidade}`, 170, y + 6);
-
-                // Valores
-                doc.setFontSize(9);
-                doc.text(`Valor Unit.: ${formatarMoeda(item.valorUnitario)}`, 18, y + 14);
-                doc.text(`Total: ${formatarMoeda(item.valorTotalItem)}`, 130, y + 14);
-
-                doc.setDrawColor(220, 225, 235);
-                doc.line(18, y + 17, 192, y + 17);
-
-                // Descrição limpa
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(8);
-                doc.setTextColor(80, 90, 105);
-                doc.text(splitDesc, 18, y + 22);
-
-                y += alturaCaixa + 6;
-            });
-
-            // Se houver observações, exibe no orçamento
-            if (observacao) {
-                if (y > 250) {
-                    doc.addPage();
-                    y = 20;
-                }
-                y += 4;
-                doc.setFont('helvetica', 'bold');
-                doc.setFontSize(9);
-                doc.setTextColor(30, 41, 59);
-                doc.text("Observações:", 15, y);
-                
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(8.5);
-                let splitObs = doc.splitTextToSize(observacao, 180);
-                doc.text(splitObs, 15, y + 5);
-                y += 8 + (splitObs.length * 4);
             }
 
-            // Valor Total Geral no final
-            if (y > 270) {
-                doc.addPage();
-                y = 20;
-            }
-
-            y += 6;
-            doc.setFont('helvetica', 'bold');
-            doc.setFontSize(13);
-            doc.setTextColor(15, 23, 42);
-            doc.text(`VALOR TOTAL DO ORÇAMENTO: ${formatarMoeda(valorGeralTotal)}`, 195, y, { align: 'right' });
-
-            doc.save(`Orcamento_${cliente.replace(/\s+/g, '_')}.pdf`);
-        }
-
-        function enviarWhatsApp() {
-            const vendedorInfo = document.getElementById('selectVendedor').value;
-            const cliente = document.getElementById('cliente').value || "Cliente";
-            const observacao = document.getElementById('observacao').value.trim();
-
-            if (!vendedorInfo || carrinho.length === 0) {
-                alert("Preencha o vendedor e adicione máquinas.");
+            if (databaseGlobal.length === 0) {
+                alert("Nenhum item estruturado encontrado. Verifique o formato do PDF.");
                 return;
             }
 
-            const [nomeVendedor] = vendedorInfo.split('|');
-            let valorTotalGeral = 0;
+            status.textContent = `Sucesso! ${databaseGlobal.length} máquinas mapeadas.`;
+            document.getElementById('downloadArea').classList.remove('hidden');
+        }
 
-            let msg = `*ORÇAMENTO - ANDRADE*\n*Cliente:* ${cliente}\n*Vendedor:* ${nomeVendedor}\n\n*Itens:*\n`;
+        function limparDescricao(trecho) {
+            let limpo = trecho.replace(/(R\$\s*[\d\.,]+)/g, "");
+            limpo = limpo.replace(/Depósito|1\s*Boleto\*?|2\s*Boletos?|3\s*Boletos?|4\s*Boletos?|5\s*Boletos?|6\s*Boletos?/gi, "").trim();
             
-            carrinho.forEach((item, i) => {
-                valorTotalGeral += item.valorTotalItem;
-                msg += `${i + 1}. *[${item.marca}] ${item.modelo}* (Cod: ${item.cod})\n`;
-                msg += `   - Qtd: ${item.quantidade} | Unit: ${formatarMoeda(item.valorUnitario)}\n`;
-                msg += `   - Subtotal: ${formatarMoeda(item.valorTotalItem)}\n\n`;
-            });
-
-            if (observacao) {
-                msg += `*Observações:* ${observacao}\n\n`;
+            if (limpo.includes("Modelo:")) {
+                limpo = limpo.split("Modelo:")[0];
             }
+            return limpo.substring(0, 450).trim();
+        }
 
-            msg += `*VALOR TOTAL: ${formatarMoeda(valorTotalGeral)}*`;
-
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
+        function baixarJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(databaseGlobal, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "database.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
         }
     </script>
 </body>
